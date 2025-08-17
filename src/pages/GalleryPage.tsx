@@ -110,7 +110,8 @@ const GalleryPage: React.FC = () => {
   };
 
   return (
-    <div className="pt-16 sm:pt-18 lg:pt-20">
+    <>
+      <div className="pt-16 sm:pt-18 lg:pt-20">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 bg-gradient-to-br from-warm-white to-cream overflow-hidden">
         <div className="absolute top-10 right-10 w-40 h-40 border border-gold/20 rounded-full animate-float hidden lg:block"></div>
@@ -225,7 +226,8 @@ const GalleryPage: React.FC = () => {
           </div>
         </div>
       )}
-    </div>
+      </div>
+    </>
   );
 };
 
