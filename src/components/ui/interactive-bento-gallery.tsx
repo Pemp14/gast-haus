@@ -129,9 +129,10 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                 <motion.div
                     className="relative rounded-xl bg-green-400/20 backdrop-blur-xl 
                              border border-green-400/30 shadow-lg
-                             cursor-grab active:cursor-grabbing mx-auto"
+                             cursor-grab active:cursor-grabbing mx-auto
+                             max-w-[90vw] overflow-x-auto"
                 >
-                    <div className="flex items-center justify-center -space-x-2 px-3 py-2">
+                    <div className="flex items-center justify-center -space-x-1 sm:-space-x-2 px-2 sm:px-3 py-2 min-w-max">
                         {mediaItems.map((item, index) => (
                             <motion.div
                                 key={item.id}
@@ -144,7 +145,7 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                                 }}
                                 className={`
                                     relative group
-                                    w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 
+                                    w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 
                                     rounded-lg overflow-hidden 
                                     cursor-pointer hover:z-20
                                     ${selectedItem.id === item.id
