@@ -126,7 +126,7 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                 className="fixed z-50 bottom-4 touch-none"
                 style={{ 
                     left: '50%',
-                    transform: `translateX(-50%) translateX(${dockPosition.x}px) translateY(${dockPosition.y}px)`
+                    transform: `translateX(calc(-50% + ${dockPosition.x}px)) translateY(${dockPosition.y}px)`
                 }}
             >
                 <motion.div
