@@ -62,9 +62,9 @@ const HeroCarousel: React.FC = () => {
   };
 
   return (
-<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-4 sm:pt-0 pb-0">
+<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-6 sm:pt-0 pb-0">
       {/* Carousel Container */}
-      <div className="relative w-full h-[85vh] sm:h-[65vh] lg:h-[75vh] max-w-[105rem] mx-auto px-4 sm:px-6 lg:px-8 mt-4 sm:mt-6 lg:mt-8">
+      <div className="relative w-full h-[85vh] sm:h-[65vh] lg:h-[75vh] max-w-[105rem] mx-auto px-4 sm:px-6 lg:px-8 mt-6 sm:mt-6 lg:mt-8">
         {/* Slides */}
         <div className="relative h-full rounded-3xl overflow-hidden luxury-shadow bg-black">
           {slides.map((slide, index) => (
