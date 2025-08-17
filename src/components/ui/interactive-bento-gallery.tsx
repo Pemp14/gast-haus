@@ -39,6 +39,19 @@ interface GalleryModalProps {
 const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaItems }: GalleryModalProps) => {
     const [dockPosition, setDockPosition] = useState({ x: 0, y: 0 });
 
+    // Disable scroll when modal is open
+    React.useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
+
     const currentIndex = mediaItems.findIndex(item => item.id === selectedItem.id);
     
     const nextImage = () => {
@@ -130,31 +143,21 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                                 <MediaItem item={selectedItem} className="w-full h-full object-contain bg-gray-900/20" onClick={onClose} />
                             </motion.div>
                         </AnimatePresence>
-                        
-                        {/* Photo Info Overlay */}
-                        {/* Progress Bar */}
-                        <motion.div
-                            className="absolute bottom-4 left-4 right-4"
-                            initial={{ y: 20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ delay: 0.3 }}
-                        >
-                            <div className="bg-black/40 backdrop-blur-sm rounded-full h-2 overflow-hidden">
-                                <motion.div
-                                    className="h-full bg-gradient-to-r from-green-400 to-green-500 rounded-full"
-                                    initial={{ width: 0 }}
-                                    animate={{ 
-                                        width: `${((currentIndex + 1) / mediaItems.length) * 100}%` 
-                                    }}
-                                    transition={{ 
-                                        type: "spring", 
-                                        stiffness: 400, 
-                                        damping: 30 
-                                    }}
-                                />
-                            </div>
-                        </motion.div>
                     </div>
+                    
+                    {/* Text Counter under photo */}
+                    <motion.div
+                        className="text-center py-4"
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.3 }}
+                    >
+                        <div className="inline-block bg-black/40 backdrop-blur-sm rounded-full px-4 py-2">
+                            <span className="text-white font-medium text-lg">
+                                {currentIndex + 1}/{mediaItems.length}
+                            </span>
+                        </div>
+                    </motion.div>
                 </div>
 
                 {/* Navigation Arrows */}
