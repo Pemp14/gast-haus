@@ -23,10 +23,10 @@ const Header: React.FC = () => {
 
   // Пункты меню в одном месте, чтобы не дублировать
   const links = [
-    { to: '/', label: 'Acasă' },
-    { to: '/menu', label: 'Meniu' },
-    { to: '/about', label: 'Despre' },
-    { to: '/gallery', label: 'Galerie' },
+    { to: '/', label: t('home') },
+    { to: '/menu', label: t('menu') },
+    { to: '/about', label: t('about') },
+    { to: '/gallery', label: t('gallery') },
     
   ];
 
