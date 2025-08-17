@@ -55,14 +55,24 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                 }}
                 className="fixed inset-0 w-full min-h-screen sm:h-[90vh] md:h-[600px] backdrop-blur-lg 
                           rounded-none sm:rounded-lg md:rounded-xl overflow-hidden z-10"
+                style={{
+                    backgroundImage: `url(${selectedItem.url})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                }}
             >
+                {/* Blurred background overlay */}
+                <div className="absolute inset-0 backdrop-blur-3xl bg-black/30"></div>
+                
                 {/* Main Content */}
-                <div className="h-full flex flex-col">
+                <div className="h-full flex flex-col relative z-10">
                     <div className="flex-1 p-2 sm:p-3 md:p-4 flex items-center justify-center bg-gray-50/50">
+                        <div className="absolute inset-0 bg-black/20"></div>
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={selectedItem.id}
-                                className="relative w-full aspect-[16/9] max-w-[95%] sm:max-w-[85%] md:max-w-3xl 
+                                className="relative z-20 w-full aspect-[16/9] max-w-[95%] sm:max-w-[85%] md:max-w-3xl 
                                          h-auto max-h-[70vh] rounded-lg overflow-hidden shadow-md"
                                 initial={{ y: 20, scale: 0.97 }}
                                 animate={{
