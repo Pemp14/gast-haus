@@ -89,7 +89,7 @@ const MenuPage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <div className="elegant-border mb-8">
             <p className="text-gold font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
-              Culinary Excellence
+              {t('culinaryExcellence')}
             </p>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6 sm:mb-8 font-serif">
@@ -146,7 +146,7 @@ const MenuPage: React.FC = () => {
                           className="w-full luxury-button py-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2"
                         >
                           <Phone className="h-4 w-4" />
-                          <span>Order Now</span>
+                          <span>{t('orderNow')}</span>
                         </button>
                       </div>
                     </div>
@@ -162,10 +162,10 @@ const MenuPage: React.FC = () => {
       <section className="py-16 lg:py-20 bg-gradient-to-br from-light-gold to-cream">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">
-            Ready to Order?
+            {t('readyToOrder')}
           </h2>
           <p className="text-lg lg:text-xl text-warm-gray mb-8 leading-relaxed">
-            Call us now to make a reservation or place your order
+            {t('callNowReservation')}
           </p>
           <button
             onClick={handleCall}

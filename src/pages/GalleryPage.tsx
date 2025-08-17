@@ -72,6 +72,19 @@ const GalleryPage: React.FC = () => {
   const categories = ['All', 'Interior', 'Food', 'Terrace', 'Events', 'Drinks', 'Kitchen'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
+  const getCategoryName = (category: string) => {
+    switch (category) {
+      case 'All': return t('all');
+      case 'Interior': return t('interior');
+      case 'Food': return t('food');
+      case 'Terrace': return t('terrace');
+      case 'Events': return t('events');
+      case 'Drinks': return t('drinks');
+      case 'Kitchen': return t('kitchen');
+      default: return category;
+    }
+  };
+
   const filteredImages = selectedCategory === 'All' 
     ? images 
     : images.filter(img => img.category === selectedCategory);
@@ -106,7 +119,7 @@ const GalleryPage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <div className="elegant-border mb-8">
             <p className="text-gold font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
-              Visual Experience
+              {t('visualExperience')}
             </p>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6 sm:mb-8 font-serif">
@@ -114,7 +127,7 @@ const GalleryPage: React.FC = () => {
           </h1>
           <div className="section-divider"></div>
           <p className="text-lg lg:text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed font-light">
-            Explore the atmosphere, cuisine, and experiences at Gast Haus
+            {t('exploreAtmosphere')}
           </p>
         </div>
       </section>
@@ -133,7 +146,7 @@ const GalleryPage: React.FC = () => {
                     : 'bg-white text-charcoal hover:bg-gold hover:text-white'
                 }`}
               >
-                {category}
+                {getCategoryName(category)}
               </button>
             ))}
           </div>

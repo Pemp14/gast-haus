@@ -80,7 +80,7 @@ const Menu: React.FC = () => {
         <div className="text-center mb-12 sm:mb-16 lg:mb-20 animate-fade-in">
           <div className="elegant-border mb-8">
             <p className="text-gold font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
-              Culinary Excellence
+              {t('culinaryExcellence')}
             </p>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-charcoal mb-6 sm:mb-8 font-serif px-4">

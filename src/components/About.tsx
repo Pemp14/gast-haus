@@ -38,29 +38,29 @@ const About: React.FC = () => {
             <div className="w-16 sm:w-20 h-1 bg-gold mb-6 sm:mb-8"></div>
             
             <p className="text-base sm:text-lg lg:text-xl text-warm-gray leading-relaxed mb-8 sm:mb-12 font-light">
-              {t('aboutText')}
+              {t('ourStory')}
             </p>
 
             {/* Features */}
             <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
               <div className="text-center p-4 sm:p-6 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-4">🎵</div>
-                <div className="text-sm sm:text-base lg:text-lg font-semibold text-charcoal">Live Music</div>
+                <div className="text-sm sm:text-base lg:text-lg font-semibold text-charcoal">{t('liveMusic')}</div>
               </div>
               
               <div className="text-center p-4 sm:p-6 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-4">🌿</div>
-                <div className="text-sm sm:text-base lg:text-lg font-semibold text-charcoal">Terrace</div>
+                <div className="text-sm sm:text-base lg:text-lg font-semibold text-charcoal">{t('terrace')}</div>
               </div>
               
               <div className="text-center p-4 sm:p-6 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-4">💼</div>
-                <div className="text-sm sm:text-base lg:text-lg font-semibold text-charcoal">Business Lunch</div>
+                <div className="text-sm sm:text-base lg:text-lg font-semibold text-charcoal">{t('businessLunch')}</div>
               </div>
               
               <div className="text-center p-4 sm:p-6 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-4">🍽️</div>
-                <div className="text-sm sm:text-base lg:text-lg font-semibold text-charcoal">Nikkei Cuisine</div>
+                <div className="text-sm sm:text-base lg:text-lg font-semibold text-charcoal">{t('nikkeiCuisine')}</div>
               </div>
             </div>
           </div>

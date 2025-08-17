@@ -13,22 +13,22 @@ const HeroCarousel: React.FC = () => {
     {
       image: '/images/GastMain1.jpg',
       title: t('heroTitle'),
-      subtitle: 'Experience culinary excellence in the heart of Chișinău',
+      subtitle: t('experienceCulinary'),
     },
     {
       image: '/images/GastMain3.jpg',
       title: t('heroTitle'),
-      subtitle: 'Experience culinary excellence in the heart of Chișinău',
+      subtitle: t('experienceCulinary'),
     },
     {
       image: '/images/GastMain4.jpg',
       title: t('heroTitle'),
-      subtitle: 'Experience culinary excellence in the heart of Chișinău',
+      subtitle: t('experienceCulinary'),
     },
     {
       image: '/images/GastMain5.jpg',
       title: t('heroTitle'),
-      subtitle: 'Experience culinary excellence in the heart of Chișinău',
+      subtitle: t('experienceCulinary'),
     },
   ];
 

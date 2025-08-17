@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">
-              Explore Gast Haus
+              {t('exploreGastHaus')}
             </h2>
             <div className="section-divider"></div>
           </div>
@@ -66,10 +66,10 @@ const HomePage: React.FC = () => {
                     {t('about')}
                   </h3>
                   <p className="text-warm-gray mb-4 text-sm lg:text-base">
-                    Nikkei cuisine meets European elegance
+                    {t('nikkeiCuisineDesc')}
                   </p>
                   <div className="flex items-center text-black font-semibold">
-                    <span className="mr-2">Learn More</span>
+                    <span className="mr-2">{t('learnMore')}</span>
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
                 </div>

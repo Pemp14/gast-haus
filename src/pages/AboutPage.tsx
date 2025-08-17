@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <div className="elegant-border mb-8">
             <p className="text-gold font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
-              Our Story
+              {t('ourStory')}
             </p>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6 sm:mb-8 font-serif">
@@ -47,7 +47,7 @@ const AboutPage: React.FC = () => {
             {/* Content */}
             <div className="lg:pl-12 animate-slide-up">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 sm:mb-8 font-serif leading-tight">
-                Culinary Excellence
+                {t('culinaryExcellence')}
               </h2>
               
               <div className="w-16 sm:w-20 h-1 bg-gold mb-6 sm:mb-8"></div>
@@ -62,8 +62,8 @@ const AboutPage: React.FC = () => {
                     <span className="text-2xl">🍽️</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Nikkei Cuisine</h3>
-                    <p className="text-warm-gray">Japanese-Peruvian fusion meets European elegance</p>
+                    <h3 className="text-xl font-bold text-charcoal mb-2">{t('nikkeiCuisine')}</h3>
+                    <p className="text-warm-gray">{t('nikkeiCuisineDesc')}</p>
                   </div>
                 </div>
 
@@ -72,8 +72,8 @@ const AboutPage: React.FC = () => {
                     <span className="text-2xl">🎵</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Live Music</h3>
-                    <p className="text-warm-gray">Enjoy live performances in our cozy atmosphere</p>
+                    <h3 className="text-xl font-bold text-charcoal mb-2">{t('liveMusic')}</h3>
+                    <p className="text-warm-gray">{t('liveMusicDesc')}</p>
                   </div>
                 </div>
 
@@ -82,8 +82,8 @@ const AboutPage: React.FC = () => {
                     <span className="text-2xl">🌿</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Terrace Dining</h3>
-                    <p className="text-warm-gray">Beautiful outdoor seating for perfect evenings</p>
+                    <h3 className="text-xl font-bold text-charcoal mb-2">{t('terraceDining')}</h3>
+                    <p className="text-warm-gray">{t('terraceDiningDesc')}</p>
                   </div>
                 </div>
               </div>
@@ -94,22 +94,22 @@ const AboutPage: React.FC = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
               <div className="text-3xl lg:text-4xl mb-4">🎵</div>
-              <div className="text-lg font-semibold text-charcoal">Live Music</div>
+              <div className="text-lg font-semibold text-charcoal">{t('liveMusic')}</div>
             </div>
             
             <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
               <div className="text-3xl lg:text-4xl mb-4">🌿</div>
-              <div className="text-lg font-semibold text-charcoal">Terrace</div>
+              <div className="text-lg font-semibold text-charcoal">{t('terrace')}</div>
             </div>
             
             <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
               <div className="text-3xl lg:text-4xl mb-4">💼</div>
-              <div className="text-lg font-semibold text-charcoal">Business Lunch</div>
+              <div className="text-lg font-semibold text-charcoal">{t('businessLunch')}</div>
             </div>
             
             <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
               <div className="text-3xl lg:text-4xl mb-4">🍽️</div>
-              <div className="text-lg font-semibold text-charcoal">Nikkei Cuisine</div>
+              <div className="text-lg font-semibold text-charcoal">{t('nikkeiCuisine')}</div>
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ const AboutPage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">
-              Why Choose Gast Haus?
+              {t('whyChooseGastHaus')}
             </h2>
             <div className="section-divider"></div>
           </div>
@@ -130,9 +130,9 @@ const AboutPage: React.FC = () => {
               <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl">👨‍🍳</span>
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-charcoal mb-4 font-serif">Expert Chefs</h3>
+              <h3 className="text-xl lg:text-2xl font-bold text-charcoal mb-4 font-serif">{t('expertChefs')}</h3>
               <p className="text-warm-gray leading-relaxed">
-                Our experienced chefs bring passion and creativity to every dish
+                {t('expertChefsDesc')}
               </p>
             </div>
 
@@ -140,9 +140,9 @@ const AboutPage: React.FC = () => {
               <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl">🥘</span>
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-charcoal mb-4 font-serif">Fresh Ingredients</h3>
+              <h3 className="text-xl lg:text-2xl font-bold text-charcoal mb-4 font-serif">{t('freshIngredients')}</h3>
               <p className="text-warm-gray leading-relaxed">
-                We source only the finest, freshest ingredients for our dishes
+                {t('freshIngredientsDesc')}
               </p>
             </div>
 
@@ -150,9 +150,9 @@ const AboutPage: React.FC = () => {
               <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl">🏆</span>
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-charcoal mb-4 font-serif">Award Winning</h3>
+              <h3 className="text-xl lg:text-2xl font-bold text-charcoal mb-4 font-serif">{t('awardWinning')}</h3>
               <p className="text-warm-gray leading-relaxed">
-                Recognized for excellence in cuisine and service
+                {t('awardWinningDesc')}
               </p>
             </div>
           </div>
