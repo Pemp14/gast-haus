@@ -123,14 +123,15 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                         y: prev.y + info.offset.y
                     }));
                 }}
-                className="fixed z-50 left-1/2 bottom-4 -translate-x-1/2 touch-none"
+                className="fixed z-50 left-1/2 bottom-4 transform -translate-x-1/2 touch-none"
+                style={{ left: '50%' }}
             >
                 <motion.div
                     className="relative rounded-xl bg-green-400/20 backdrop-blur-xl 
                              border border-green-400/30 shadow-lg
-                             cursor-grab active:cursor-grabbing"
+                             cursor-grab active:cursor-grabbing mx-auto"
                 >
-                    <div className="flex items-center -space-x-2 px-3 py-2">
+                    <div className="flex items-center justify-center -space-x-2 px-3 py-2">
                         {mediaItems.map((item, index) => (
                             <motion.div
                                 key={item.id}
