@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Menu Card */}
             <Link to="/menu" className="group">
-              <div className="menu-card rounded-3xl overflow-hidden luxury-shadow hover-lift h-full">
+              <div className="menu-card rounded-3xl overflow-hidden luxury-shadow hover-lift h-full flex flex-col">
                 <div className="h-48 lg:h-56 relative overflow-hidden">
                   <img
                     src="https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -35,11 +35,11 @@ const HomePage: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
-                <div className="p-6 lg:p-8">
+                <div className="p-6 lg:p-8 flex flex-col flex-grow">
                   <h3 className="text-xl lg:text-2xl font-bold text-charcoal font-serif mb-3 text-center">
                     {t('menu')}
                   </h3>
-                  <p className="text-warm-gray mb-4 text-sm lg:text-base text-center">
+                  <p className="text-warm-gray mb-4 text-sm lg:text-base text-center flex-grow">
                     {t('menuIntro')}
                   </p>
                   <div className="flex items-center justify-center text-black font-semibold">
@@ -52,7 +52,7 @@ const HomePage: React.FC = () => {
 
             {/* Gallery Card */}
             <Link to="/gallery" className="group">
-              <div className="menu-card rounded-3xl overflow-hidden luxury-shadow hover-lift h-full">
+              <div className="menu-card rounded-3xl overflow-hidden luxury-shadow hover-lift h-full flex flex-col">
                 <div className="h-48 lg:h-56 relative overflow-hidden">
                   <img
                     src="https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -61,11 +61,11 @@ const HomePage: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
-                <div className="p-6 lg:p-8">
+                <div className="p-6 lg:p-8 flex flex-col flex-grow">
                   <h3 className="text-xl lg:text-2xl font-bold text-charcoal font-serif mb-3 text-center">
                     {t('gallery')}
                   </h3>
-                  <p className="text-warm-gray mb-4 text-sm lg:text-base text-center">
+                  <p className="text-warm-gray mb-4 text-sm lg:text-base text-center flex-grow">
                     {t('exploreAtmosphere')}
                   </p>
                   <div className="flex items-center justify-center text-black font-semibold">
@@ -77,7 +77,7 @@ const HomePage: React.FC = () => {
             </Link>
             {/* About Card */}
             <Link to="/about" className="group">
-              <div className="menu-card rounded-3xl overflow-hidden luxury-shadow hover-lift h-full">
+              <div className="menu-card rounded-3xl overflow-hidden luxury-shadow hover-lift h-full flex flex-col">
                 <div className="h-48 lg:h-56 relative overflow-hidden">
                   <img
                     src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -86,11 +86,11 @@ const HomePage: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
-                <div className="p-6 lg:p-8">
+                <div className="p-6 lg:p-8 flex flex-col flex-grow">
                   <h3 className="text-xl lg:text-2xl font-bold text-charcoal font-serif mb-3 text-center">
                     {t('about')}
                   </h3>
-                  <p className="text-warm-gray mb-4 text-sm lg:text-base text-center">
+                  <p className="text-warm-gray mb-4 text-sm lg:text-base text-center flex-grow">
                     {t('nikkeiCuisineDesc')}
                   </p>
                   <div className="flex items-center justify-center text-black font-semibold">
