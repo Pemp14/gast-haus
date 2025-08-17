@@ -85,7 +85,10 @@ const HeroCarousel: React.FC = () => {
                 <div className="max-w-4xl mx-auto animate-fade-in">
                   
 
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 sm:mb-8 font-felidae leading-[0.9] text-shadow px-2">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 sm:mb-8 font-felidae leading-[0.9] text-shadow px-2 font-bold drop-shadow-2xl" style={{
+                    textShadow: '0 0 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.7), 2px 2px 8px rgba(0, 0, 0, 1), -2px -2px 4px rgba(0, 0, 0, 0.8)',
+                    WebkitTextStroke: '1px rgba(0, 0, 0, 0.5)'
+                  }}>
   {slide.title}
 </h1>
 
