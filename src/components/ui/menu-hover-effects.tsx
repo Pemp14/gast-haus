@@ -74,7 +74,7 @@ export default function NavMenu() {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between px-4">
-          <span className="text-lg font-semibold">Menu</span>
+          <span className="text-lg font-semibold">{t('menu')}</span>
           <button
             onClick={() => setOpen(false)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20"
