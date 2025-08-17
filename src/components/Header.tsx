@@ -79,13 +79,13 @@ const Header: React.FC = () => {
           <div
             className="absolute inset-0 w-screen h-[100dvh] bg-soft-black text-white shadow-xl
             pt-[calc(20px+env(safe-area-inset-top))] pb-[env(safe-area-inset-bottom)] px-6
-            overflow-y-auto overscroll-contain"
+            overflow-y-auto overscroll-contain flex flex-col justify-center"
 
             onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-modal="true"
           >
-            <div className="absolute top-4 right-4">
+            <div className="absolute top-6 right-6">
               <button
                 onClick={() => setOpen(false)}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20"
@@ -95,26 +95,28 @@ const Header: React.FC = () => {
               </button>
             </div>
 
-            <nav className="space-y-2 text-lg">
-              {links.map((l) => (
-                <Link
-                  key={l.to}
-                  to={l.to}
-                  onClick={() => setOpen(false)}
-                  className="block py-3 px-2 rounded-lg hover:bg-white/5"
-                >
-                  {l.label}
-                </Link>
-              ))}
-            </nav>
+            <div className="flex flex-col items-center justify-center flex-1 max-w-sm mx-auto w-full">
+              <nav className="space-y-4 text-center w-full">
+                {links.map((l) => (
+                  <Link
+                    key={l.to}
+                    to={l.to}
+                    onClick={() => setOpen(false)}
+                    className="block py-4 px-4 rounded-xl hover:bg-white/5 text-xl font-medium transition-colors duration-200"
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </nav>
 
-            <div className="mt-8">
-              <button
-                onClick={handleCall}
-                className="w-full bg-green-600 hover:bg-green-700 px-4 py-3 rounded-xl font-semibold"
-              >
-                {t('call')}
-              </button>
+              <div className="mt-8 w-full">
+                <button
+                  onClick={handleCall}
+                  className="w-full bg-green-600 hover:bg-green-700 px-6 py-4 rounded-xl font-semibold text-lg transition-colors duration-200"
+                >
+                  {t('call')}
+                </button>
+              </div>
             </div>
           </div>
         </div>
