@@ -163,26 +163,26 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                 {/* Navigation Arrows */}
                 <motion.button
                     onClick={prevImage}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 
-                             p-3 bg-black/30 backdrop-blur-sm rounded-full text-white 
+                    className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 
+                             p-2 sm:p-3 bg-black/40 backdrop-blur-sm rounded-full text-white 
                              hover:bg-black/50 transition-all duration-300 z-30"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                     </svg>
                 </motion.button>
 
                 <motion.button
                     onClick={nextImage}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 
-                             p-3 bg-black/30 backdrop-blur-sm rounded-full text-white 
+                    className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 
+                             p-2 sm:p-3 bg-black/40 backdrop-blur-sm rounded-full text-white 
                              hover:bg-black/50 transition-all duration-300 z-30"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                 </motion.button>
