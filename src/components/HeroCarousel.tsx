@@ -81,24 +81,17 @@ const HeroCarousel: React.FC = () => {
               </div>
 
               {/* Content */}
-              <div className="relative z-10 h-full flex items-center justify-center text-center text-white px-4 sm:px-6 lg:px-12">
-                <div className="max-w-4xl mx-auto animate-fade-in">
+              <div className="relative z-10 h-full flex flex-col justify-start text-left text-white px-6 sm:px-8 lg:px-12 pt-8 sm:pt-12 lg:pt-16">
+                <div className="max-w-2xl animate-fade-in">
+                  <h1 className="text-xl sm:text-2xl lg:text-3xl font-serif font-light text-white mb-2 tracking-wide leading-tight" 
+                      style={{
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0, 0, 0, 0.9)',
+                        letterSpacing: '0.05em'
+                      }}>
+                    {slide.title}
+                  </h1>
                   
-
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 sm:mb-8 font-felidae leading-[0.9] text-shadow px-2 font-bold drop-shadow-2xl" style={{
-                    textShadow: '0 0 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 0, 0, 0.7), 2px 2px 8px rgba(0, 0, 0, 1), -2px -2px 4px rgba(0, 0, 0, 0.8)',
-                    WebkitTextStroke: '1px rgba(0, 0, 0, 0.5)'
-                  }}>
-  {slide.title}
-</h1>
-
-
-                  
-
-                  {/*<p className="text-white font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
-                    {slide.subtitle}
-                  </p>*/}
-
+                  <div className="w-12 h-px bg-white/60 mt-3"></div>
                 </div>
               </div>
             </div>
