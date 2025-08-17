@@ -176,7 +176,7 @@ const GalleryPage: React.FC = () => {
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="text-gold text-3xl lg:text-4xl font-light">+</div>
-                </div>
+                <div className="text-green-400 text-3xl lg:text-4xl font-light">+</div>
               </div>
             ))}
           </div>

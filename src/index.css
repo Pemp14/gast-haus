@@ -74,7 +74,7 @@ body {
   transform: translateX(-50%);
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  background: linear-gradient(90deg, transparent, #10B981, transparent);
 }
 
 .section-padding {
@@ -180,7 +180,7 @@ body {
 
 .section-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  background: linear-gradient(90deg, transparent, #10B981, transparent);
   margin: 30px auto;
   width: 120px;
 }

@@ -27,7 +27,7 @@ const About: React.FC = () => {
           {/* Content */}
           <div className="lg:pl-12 animate-slide-up mt-8 lg:mt-0">
             <div className="elegant-border mb-8">
-              <p className="text-gold font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
+              <p className="text-green-400 font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
                 Our Story
               </p>
             </div>
