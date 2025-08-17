@@ -1,0 +1,10 @@
+{
+  "version": "0.2",
+  "language": "en,ru,ro",
+  "words": [
+    "Gast", "Haus", "GastHaus",
+    "Chișinău", "Chisinau", "Moldova", "MDL",
+    "lucide", "tailwindcss", "vite"
+  ],
+  "ignorePaths": ["node_modules", "dist", "build", ".git", ".vscode"]
+}
