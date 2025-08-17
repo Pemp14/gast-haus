@@ -123,8 +123,9 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                         y: prev.y + info.offset.y
                     }));
                 }}
-                className="fixed z-50 bottom-4 left-1/2 touch-none"
+                className="fixed z-50 bottom-4 touch-none"
                 style={{ 
+                    left: '50%',
                     transform: `translateX(-50%) translateX(${dockPosition.x}px) translateY(${dockPosition.y}px)`
                 }}
             >
