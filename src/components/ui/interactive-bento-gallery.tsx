@@ -39,6 +39,18 @@ interface GalleryModalProps {
 const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaItems }: GalleryModalProps) => {
     const [dockPosition, setDockPosition] = useState({ x: 0, y: 0 });
 
+    const currentIndex = mediaItems.findIndex(item => item.id === selectedItem.id);
+    
+    const nextImage = () => {
+        const nextIndex = (currentIndex + 1) % mediaItems.length;
+        setSelectedItem(mediaItems[nextIndex]);
+    };
+    
+    const prevImage = () => {
+        const prevIndex = currentIndex === 0 ? mediaItems.length - 1 : currentIndex - 1;
+        setSelectedItem(mediaItems[prevIndex]);
+    };
+
     if (!isOpen) return null;
 
     return (
@@ -64,6 +76,29 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
             >
                 {/* Blurred background overlay */}
                 <div className="absolute inset-0 backdrop-blur-3xl bg-black/30"></div>
+                
+                {/* Decorative particles */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    {[...Array(6)].map((_, i) => (
+                        <motion.div
+                            key={i}
+                            className="absolute w-2 h-2 bg-white/20 rounded-full"
+                            style={{
+                                left: `${20 + i * 15}%`,
+                                top: `${30 + (i % 2) * 40}%`,
+                            }}
+                            animate={{
+                                y: [-10, 10, -10],
+                                opacity: [0.3, 0.7, 0.3],
+                            }}
+                            transition={{
+                                duration: 3 + i * 0.5,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                            }}
+                        />
+                    ))}
+                </div>
                 
                 {/* Main Content */}
                 <div className="h-full flex flex-col relative z-10">
@@ -93,19 +128,60 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                                 onClick={onClose}
                             >
                                 <MediaItem item={selectedItem} className="w-full h-full object-contain bg-gray-900/20" onClick={onClose} />
-                                <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-3 md:p-4 
-                                              bg-gradient-to-t from-black/50 to-transparent">
-                                    <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold">
-                                        {selectedItem.title}
-                                    </h3>
-                                    <p className="text-white/80 text-xs sm:text-sm mt-1">
-                                        {selectedItem.desc}
-                                    </p>
-                                </div>
                             </motion.div>
                         </AnimatePresence>
+                        
+                        {/* Photo Info Overlay */}
+                        <motion.div
+                            className="absolute bottom-4 left-4 right-4 p-3 sm:p-4 
+                                     bg-black/40 backdrop-blur-sm rounded-xl border border-white/20"
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.3 }}
+                        >
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <h3 className="text-white text-lg sm:text-xl font-semibold mb-1">
+                                        {selectedItem.title}
+                                    </h3>
+                                    <p className="text-white/70 text-sm">
+                                        {selectedItem.desc || "Gast Haus Gallery"}
+                                    </p>
+                                </div>
+                                <div className="text-white/60 text-sm font-medium">
+                                    {currentIndex + 1} / {mediaItems.length}
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
                 </div>
+
+                {/* Navigation Arrows */}
+                <motion.button
+                    onClick={prevImage}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 
+                             p-3 bg-black/30 backdrop-blur-sm rounded-full text-white 
+                             hover:bg-black/50 transition-all duration-300 z-30"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                </motion.button>
+
+                <motion.button
+                    onClick={nextImage}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 
+                             p-3 bg-black/30 backdrop-blur-sm rounded-full text-white 
+                             hover:bg-black/50 transition-all duration-300 z-30"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                </motion.button>
 
                 {/* Close Button */}
                 <motion.button
