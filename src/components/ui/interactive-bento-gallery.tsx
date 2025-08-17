@@ -198,6 +198,18 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                 >
                     <X className='w-3 h-3' />
                 </motion.button>
+
+                {/* Small Close Button */}
+                <motion.button
+                    className="absolute top-3 right-3 z-30
+                              p-1.5 rounded-full bg-black/40 backdrop-blur-sm text-white 
+                              hover:bg-black/60 transition-all duration-300"
+                    onClick={onClose}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    <X className="w-4 h-4" />
+                </motion.button>
             </motion.div>
 
             {/* Draggable Dock */}
