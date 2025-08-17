@@ -132,25 +132,26 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                         </AnimatePresence>
                         
                         {/* Photo Info Overlay */}
+                        {/* Progress Bar */}
                         <motion.div
-                            className="absolute bottom-4 left-4 right-4 p-3 sm:p-4 
-                                     bg-black/40 backdrop-blur-sm rounded-xl border border-white/20"
+                            className="absolute bottom-4 left-4 right-4"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.3 }}
                         >
-                            <div className="flex items-center justify-between">
-                                <div>
-                                    <h3 className="text-white text-lg sm:text-xl font-semibold mb-1">
-                                        {selectedItem.title}
-                                    </h3>
-                                    <p className="text-white/70 text-sm">
-                                        {selectedItem.desc || "Gast Haus Gallery"}
-                                    </p>
-                                </div>
-                                <div className="text-white/60 text-sm font-medium">
-                                    {currentIndex + 1} / {mediaItems.length}
-                                </div>
+                            <div className="bg-black/40 backdrop-blur-sm rounded-full h-2 overflow-hidden">
+                                <motion.div
+                                    className="h-full bg-gradient-to-r from-green-400 to-green-500 rounded-full"
+                                    initial={{ width: 0 }}
+                                    animate={{ 
+                                        width: `${((currentIndex + 1) / mediaItems.length) * 100}%` 
+                                    }}
+                                    transition={{ 
+                                        type: "spring", 
+                                        stiffness: 400, 
+                                        damping: 30 
+                                    }}
+                                />
                             </div>
                         </motion.div>
                     </div>
