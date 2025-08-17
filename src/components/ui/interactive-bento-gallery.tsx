@@ -282,22 +282,30 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
                                     className="absolute inset-0 w-full h-full"
                                     onClick={() => !isDragging && setSelectedItem(item)}
                                 />
+                                {/* Hover overlay with click hint */}
                                 <motion.div
-                                    className="absolute inset-0 flex flex-col justify-end p-2 sm:p-3 md:p-4"
+                                    className="absolute inset-0 bg-black/20 flex items-center justify-center"
                                     initial={{ opacity: 0 }}
                                     whileHover={{ opacity: 1 }}
                                     transition={{ duration: 0.2 }}
                                 >
-                                    <div className="absolute inset-0 flex flex-col justify-end p-2 sm:p-3 md:p-4">
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                                        <h3 className="relative text-white text-xs sm:text-sm md:text-base font-medium line-clamp-1">
-                                            {item.title}
-                                        </h3>
-                                        <p className="relative text-white/70 text-[10px] sm:text-xs md:text-sm mt-0.5 line-clamp-2">
-                                            {item.desc}
-                                        </p>
-                                    </div>
+                                    <motion.div
+                                        className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30"
+                                        whileHover={{ scale: 1.1 }}
+                                        transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                                    >
+                                        <div className="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center">
+                                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                                        </div>
+                                    </motion.div>
                                 </motion.div>
+                                
+                                {/* Mobile tap hint */}
+                                <div className="absolute top-2 right-2 md:hidden">
+                                    <div className="w-6 h-6 bg-green-400/80 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                                    </div>
+                                </div>
                             </motion.div>
                         ))}
                     </motion.div>
