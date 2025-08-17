@@ -189,26 +189,14 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
 
                 {/* Close Button */}
                 <motion.button
-                    className="absolute top-2 sm:top-2.5 md:top-3 right-2 sm:right-2.5 md:right-3 
-                              p-2 rounded-full bg-gray-200/80 text-gray-700 hover:bg-gray-300/80 
-                              text-xs sm:text-sm backdrop-blur-sm"
+                    className="absolute top-4 right-4 z-50
+                              p-2 rounded-full bg-white/90 backdrop-blur-sm text-gray-800 
+                              hover:bg-white transition-all duration-300 shadow-lg border border-gray-200/50"
                     onClick={onClose}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                 >
-                    <X className='w-3 h-3' />
-                </motion.button>
-
-                {/* Small Close Button */}
-                <motion.button
-                    className="absolute top-3 right-3 z-30
-                              p-1.5 rounded-full bg-black/40 backdrop-blur-sm text-white 
-                              hover:bg-black/60 transition-all duration-300"
-                    onClick={onClose}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                >
-                    <X className="w-4 h-4" />
+                    <X className="w-5 h-5" />
                 </motion.button>
             </motion.div>
 
