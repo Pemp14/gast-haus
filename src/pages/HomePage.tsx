@@ -36,13 +36,13 @@ const HomePage: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
                 <div className="p-6 lg:p-8">
-                  <h3 className="text-xl lg:text-2xl font-bold text-charcoal font-serif mb-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-charcoal font-serif mb-3 text-center">
                     {t('menu')}
                   </h3>
-                  <p className="text-warm-gray mb-4 text-sm lg:text-base">
+                  <p className="text-warm-gray mb-4 text-sm lg:text-base text-center">
                     {t('menuIntro')}
                   </p>
-                  <div className="flex items-center text-black font-semibold">
+                  <div className="flex items-center justify-center text-black font-semibold">
                     <span className="mr-2">{t('viewMenu')}</span>
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
@@ -62,13 +62,13 @@ const HomePage: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
                 <div className="p-6 lg:p-8">
-                  <h3 className="text-xl lg:text-2xl font-bold text-charcoal font-serif mb-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-charcoal font-serif mb-3 text-center">
                     {t('gallery')}
                   </h3>
-                  <p className="text-warm-gray mb-4 text-sm lg:text-base">
+                  <p className="text-warm-gray mb-4 text-sm lg:text-base text-center">
                     {t('exploreAtmosphere')}
                   </p>
-                  <div className="flex items-center text-black font-semibold">
+                  <div className="flex items-center justify-center text-black font-semibold">
                     <span className="mr-2">{t('visualExperience')}</span>
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
@@ -87,13 +87,13 @@ const HomePage: React.FC = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 </div>
                 <div className="p-6 lg:p-8">
-                  <h3 className="text-xl lg:text-2xl font-bold text-charcoal font-serif mb-3">
+                  <h3 className="text-xl lg:text-2xl font-bold text-charcoal font-serif mb-3 text-center">
                     {t('about')}
                   </h3>
-                  <p className="text-warm-gray mb-4 text-sm lg:text-base">
+                  <p className="text-warm-gray mb-4 text-sm lg:text-base text-center">
                     {t('nikkeiCuisineDesc')}
                   </p>
-                  <div className="flex items-center text-black font-semibold">
+                  <div className="flex items-center justify-center text-black font-semibold">
                     <span className="mr-2">{t('learnMore')}</span>
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
