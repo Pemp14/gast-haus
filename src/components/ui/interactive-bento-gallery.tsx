@@ -145,15 +145,15 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
                         </AnimatePresence>
                     </div>
                     
-                    {/* Text Counter under photo */}
+                    {/* Compact Counter under photo */}
                     <motion.div
-                        className="text-center py-4"
-                        initial={{ y: 20, opacity: 0 }}
+                        className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
+                        initial={{ y: 10, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.3 }}
                     >
-                        <div className="inline-block bg-black/40 backdrop-blur-sm rounded-full px-4 py-2">
-                            <span className="text-white font-medium text-lg">
+                        <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5 shadow-lg">
+                            <span className="text-gray-800 font-medium text-sm">
                                 {currentIndex + 1}/{mediaItems.length}
                             </span>
                         </div>
