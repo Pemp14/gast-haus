@@ -230,6 +230,7 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
                 ) : (
                     <motion.div
                         className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-3 auto-rows-[60px]"
+                        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 auto-rows-[120px] sm:auto-rows-[60px]"
                         initial="hidden"
                         animate="visible"
                         exit="hidden"
@@ -245,7 +246,7 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
                             <motion.div
                                 key={item.id}
                                 layoutId={`media-${item.id}`}
-                                className={`relative overflow-hidden rounded-xl cursor-move ${item.span}`}
+                                className={`relative overflow-hidden rounded-xl cursor-move ${window.innerWidth < 640 ? 'col-span-1 row-span-1' : item.span}`}
                                 onClick={() => !isDragging && setSelectedItem(item)}
                                 variants={{
                                     hidden: { y: 50, scale: 0.9, opacity: 0 },
@@ -303,13 +304,6 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
                                         </div>
                                     </motion.div>
                                 </motion.div>
-                                
-                                {/* Mobile tap hint */}
-                                <div className="absolute top-2 right-2 md:hidden">
-                                    <div className="w-6 h-6 bg-green-400/80 backdrop-blur-sm rounded-full flex items-center justify-center">
-                                        <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                                    </div>
-                                </div>
                             </motion.div>
                         ))}
                     </motion.div>
