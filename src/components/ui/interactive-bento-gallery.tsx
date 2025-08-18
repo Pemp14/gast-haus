@@ -377,23 +377,6 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
                                     className="absolute inset-0 w-full h-full"
                                     onClick={() => !isDragging && setSelectedItem(item)}
                                 />
-                                {/* Hover overlay with click hint */}
-                                <motion.div
-                                    className="absolute inset-0 bg-black/20 flex items-center justify-center"
-                                    initial={{ opacity: 0 }}
-                                    whileHover={{ opacity: 1 }}
-                                    transition={{ duration: 0.2 }}
-                                >
-                                    <motion.div
-                                        className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30"
-                                        whileHover={{ scale: 1.1 }}
-                                        transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                                    >
-                                        <div className="w-6 h-6 border-2 border-white rounded-full flex items-center justify-center">
-                                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                                        </div>
-                                    </motion.div>
-                                </motion.div>
                             </motion.div>
                         ))}
                     </motion.div>
