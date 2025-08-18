@@ -148,9 +148,9 @@ const MenuPage: React.FC = () => {
             {/* Close button */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-3 text-gray-800 hover:bg-white transition-all duration-300 shadow-lg border border-gray-200/50 z-50"
+              className="absolute top-3 right-3 bg-black/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-black/40 transition-all duration-300 z-50"
             >
-              <X className="w-6 h-6" />
+              <X className="w-4 h-4" />
             </button>
 
             {/* Navigation buttons */}
@@ -158,22 +158,22 @@ const MenuPage: React.FC = () => {
               <>
                 <button
                   onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-sm rounded-full p-4 text-white hover:bg-white/20 transition-all duration-300 border border-white/20"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-black/40 transition-all duration-300"
                 >
-                  <ChevronLeft className="w-8 h-8" />
+                  <ChevronLeft className="w-5 h-5" />
                 </button>
 
                 <button
                   onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-sm rounded-full p-4 text-white hover:bg-white/20 transition-all duration-300 border border-white/20"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-black/40 transition-all duration-300"
                 >
-                  <ChevronRight className="w-8 h-8" />
+                  <ChevronRight className="w-5 h-5" />
                 </button>
               </>
             )}
 
             {/* Image counter */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full font-medium border border-white/20">
+            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-white bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
               {selectedImageIndex + 1} / {menuImages.length}
             </div>
           </div>
