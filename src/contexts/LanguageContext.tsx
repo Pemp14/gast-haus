@@ -53,6 +53,7 @@ const translations = {
     followUs: 'Urmărește-ne',
     
     // Additional translations
+    welcomeToGastHaus: 'Bun venit la Gast Haus',
     learnMore: 'Află mai mult',
     orderNow: 'Comandă acum',
     readyToOrder: 'Gata să comanzi?',
@@ -127,6 +128,7 @@ const translations = {
     followUs: 'Подписывайтесь',
     
     // Additional translations
+    welcomeToGastHaus: 'Добро пожаловать в Gast Haus',
     learnMore: 'Узнать больше',
     orderNow: 'Заказать сейчас',
     readyToOrder: 'Готовы заказать?',
@@ -201,6 +203,7 @@ const translations = {
     followUs: 'Follow Us',
     
     // Additional translations
+    welcomeToGastHaus: 'Welcome to Gast Haus',
     learnMore: 'Learn More',
     orderNow: 'Order Now',
     readyToOrder: 'Ready to Order?',

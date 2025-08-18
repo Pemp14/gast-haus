@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import HeroCarousel from '../components/HeroCarousel';
+import { AnimatedText } from '../components/ui/animated-underline-text-one';
 
 const HomePage: React.FC = () => {
   const { t } = useLanguage();
@@ -13,10 +14,14 @@ const HomePage: React.FC = () => {
       {/* Hero Title Section */}
       <section className="pt-20 pb-8 bg-gradient-to-b from-warm-white to-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-charcoal mb-6 leading-tight animate-fade-in">
-            {t('heroTitle')}
-          </h1>
-          <div className="w-32 h-1 bg-green-400 mx-auto mb-6"></div>
+          <div className="mb-8">
+            <AnimatedText 
+              text={t('welcomeToGastHaus')}
+              textClassName="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-charcoal leading-tight"
+              underlineClassName="text-green-400"
+              underlineDuration={2}
+            />
+          </div>
           <p className="text-lg sm:text-xl lg:text-2xl text-warm-gray max-w-4xl mx-auto leading-relaxed font-light">
             {t('experienceCulinary')}
           </p>
