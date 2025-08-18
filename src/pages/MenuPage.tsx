@@ -2,81 +2,31 @@ import React from 'react';
 import { Phone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
-interface MenuItem {
-  nameKey: string;
-  descKey: string;
-  price: string;
-  image: string;
-}
-
-interface MenuCategory {
-  titleKey: string;
-  items: MenuItem[];
-}
-
 const MenuPage: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, currentLanguage } = useLanguage();
 
   const handleCall = () => {
     window.location.href = 'tel:+37378076073';
   };
 
-  const menuCategories: MenuCategory[] = [
-    {
-      titleKey: 'salads',
-      items: [
-        {
-          nameKey: 'caesarSalad',
-          descKey: 'caesarDesc',
-          price: '120 MDL',
-          image: 'https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=400'
-        }
-      ]
-    },
-    {
-      titleKey: 'sushiRolls',
-      items: [
-        {
-          nameKey: 'philadelphiaRoll',
-          descKey: 'philadelphiaDesc',
-          price: '150 MDL',
-          image: 'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=400'
-        }
-      ]
-    },
-    {
-      titleKey: 'mainDishes',
-      items: [
-        {
-          nameKey: 'beefSteak',
-          descKey: 'beefDesc',
-          price: '250 MDL',
-          image: 'https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=400'
-        }
-      ]
-    },
-    {
-      titleKey: 'desserts',
-      items: [
-        {
-          nameKey: 'cheesecake',
-          descKey: 'cheesecakeDesc',
-          price: '90 MDL',
-          image: 'https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=400'
-        }
-      ]
-    },
-    {
-      titleKey: 'drinks',
-      items: [
-        {
-          nameKey: 'cappuccino',
-          descKey: '',
-          price: '50 MDL',
-          image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=400'
-        }
-      ]
+  // Функция для получения префикса языка
+  const getLanguagePrefix = () => {
+    switch (currentLanguage) {
+      case 'ru': return 'Ru';
+      case 'ro': return 'Md';
+      case 'en': return 'En';
+      default: return 'Md';
     }
+  };
+
+  // Массив изображений меню для текущего языка
+  const menuImages = [
+    `/images/${getLanguagePrefix()}Meniu1.jpg`,
+    `/images/${getLanguagePrefix()}Meniu2.jpg`,
+    `/images/${getLanguagePrefix()}Meniu3.jpg`,
+    `/images/${getLanguagePrefix()}Meniu4.jpg`,
+    `/images/${getLanguagePrefix()}Meniu5.jpg`,
+    `/images/${getLanguagePrefix()}Meniu6.jpg`,
   ];
 
   return (
@@ -102,55 +52,23 @@ const MenuPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Menu Categories */}
+      {/* Menu Images */}
       <section className="section-padding bg-gradient-to-b from-cream to-warm-white">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="space-y-16 lg:space-y-24">
-            {menuCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="text-center animate-slide-up">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-8 lg:mb-12 font-serif">
-                  {t(category.titleKey)}
-                </h2>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
-                  {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="menu-card rounded-3xl overflow-hidden luxury-shadow hover-lift">
-                      <div className="h-48 sm:h-56 lg:h-64 relative overflow-hidden">
-                        <img
-                          src={item.image}
-                          alt={t(item.nameKey)}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                      </div>
-                      
-                      <div className="p-6 lg:p-8">
-                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3 sm:mb-4">
-                          <h3 className="text-xl lg:text-2xl font-bold text-charcoal font-serif leading-tight mb-2 sm:mb-0">
-                            {t(item.nameKey)}
-                          </h3>
-                          <span className="price-tag sm:ml-4 self-start">
-                            {item.price.replace(' MDL', '')}
-                            <span className="text-xs ml-1">MDL</span>
-                          </span>
-                        </div>
-                        
-                        {item.descKey && (
-                          <p className="text-sm sm:text-base text-warm-gray leading-relaxed font-light mb-4">
-                            {t(item.descKey)}
-                          </p>
-                        )}
-
-                        <button
-                          onClick={handleCall}
-                          className="w-full luxury-button py-3 rounded-full font-semibold text-sm flex items-center justify-center space-x-2"
-                        >
-                          <Phone className="h-4 w-4" />
-                          <span>{t('orderNow')}</span>
-                        </button>
-                      </div>
-                    </div>
-                  ))}
+          <div className="space-y-8 lg:space-y-12">
+            {menuImages.map((imageSrc, index) => (
+              <div key={index} className="animate-slide-up">
+                <div className="max-w-4xl mx-auto">
+                  <img
+                    src={imageSrc}
+                    alt={`${t('menu')} ${index + 1}`}
+                    className="w-full h-auto rounded-3xl luxury-shadow transition-transform duration-500 hover:scale-[1.02]"
+                    onError={(e) => {
+                      // Fallback к изображению-заглушке если файл не найден
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1200';
+                    }}
+                  />
                 </div>
               </div>
             ))}
