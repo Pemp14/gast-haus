@@ -81,7 +81,7 @@ const MenuPage: React.FC = () => {
   return (
     <div className="pt-16 sm:pt-18 lg:pt-20">
       {/* Hero Section */}
-      <section className="relative py-8 lg:py-12 bg-gradient-to-br from-warm-white via-cream to-light-gold">
+      <section className="relative py-8 lg:py-12 bg-gradient-to-b from-warm-white to-cream">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-10 right-10 w-32 h-32 border border-gold/20 rounded-full animate-float hidden lg:block"></div>
           <div className="absolute bottom-10 left-10 w-24 h-24 border-2 border-gold/30 rounded-full animate-float animation-delay-1000 hidden lg:block"></div>
@@ -101,7 +101,7 @@ const MenuPage: React.FC = () => {
       </section>
 
       {/* Menu Images */}
-      <section className="py-8 lg:py-12 bg-gradient-to-b from-light-gold via-cream to-warm-white">
+      <section className="py-8 lg:py-12 bg-gradient-to-b from-cream to-warm-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="space-y-8 lg:space-y-12">
             {menuImages.map((imageSrc, index) => (
@@ -172,12 +172,7 @@ const MenuPage: React.FC = () => {
       )}
 
       {/* Compact Contact Section */}
-      <div className="text-center py-10 lg:py-12 bg-gradient-to-br from-light-gold via-cream to-warm-white relative overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-4 left-1/4 w-20 h-20 bg-green-400/10 rounded-full blur-xl"></div>
-          <div className="absolute bottom-4 right-1/4 w-16 h-16 bg-gold/10 rounded-full blur-lg"></div>
-        </div>
+      <div className="text-center py-10 lg:py-12 bg-warm-white relative">
         
         <div className="max-w-2xl mx-auto px-4">
           <p className="text-charcoal mb-4 text-base lg:text-lg">{t('callNowReservation')}</p>
