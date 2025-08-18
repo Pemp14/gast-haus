@@ -320,7 +320,7 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
                 ) : (
                     <motion.div
                         className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-3 auto-rows-[60px]"
-                        className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-3 auto-rows-[200px] sm:auto-rows-[60px]"
+                        className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-3 auto-rows-[250px] sm:auto-rows-[60px]"
                         initial="hidden"
                         animate="visible"
                         exit="hidden"
@@ -336,7 +336,7 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
                             <motion.div
                                 key={item.id}
                                 layoutId={`media-${item.id}`}
-                                className={`relative overflow-hidden rounded-xl cursor-move ${window.innerWidth < 640 ? 'col-span-1 row-span-1' : item.span}`}
+                                className={`relative overflow-hidden rounded-xl cursor-move ${window.innerWidth < 640 ? 'col-span-1 row-span-1 aspect-[4/3]' : item.span}`}
                                 onClick={() => !isDragging && setSelectedItem(item)}
                                 variants={{
                                     hidden: { y: 50, scale: 0.9, opacity: 0 },
@@ -374,7 +374,7 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
                             >
                                 <MediaItem
                                     item={item}
-                                    className="absolute inset-0 w-full h-full"
+                                    className="absolute inset-0 w-full h-full object-cover"
                                     onClick={() => !isDragging && setSelectedItem(item)}
                                 />
                             </motion.div>
