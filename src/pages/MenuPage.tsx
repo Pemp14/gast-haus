@@ -134,7 +134,7 @@ const MenuPage: React.FC = () => {
 
       {/* Modal */}
       {selectedImageIndex !== null && (
-        <div className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-white/95 backdrop-blur-md z-50 flex items-center justify-center p-4">
           <div className="relative max-w-6xl max-h-full">
             <img
               src={menuImages[selectedImageIndex]}
@@ -145,7 +145,7 @@ const MenuPage: React.FC = () => {
             {/* Close button */}
             <button
               onClick={closeModal}
-              className="absolute top-3 right-3 bg-black/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-black/40 transition-all duration-300 z-50"
+              className="absolute top-3 right-3 bg-black/10 backdrop-blur-sm rounded-full p-2 text-black hover:bg-black/20 transition-all duration-300 z-50"
             >
               <X className="w-4 h-4" />
             </button>
@@ -155,14 +155,14 @@ const MenuPage: React.FC = () => {
               <>
                 <button
                   onClick={prevImage}
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-black/40 transition-all duration-300"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/10 backdrop-blur-sm rounded-full p-2 text-black hover:bg-black/20 transition-all duration-300"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
 
                 <button
                   onClick={nextImage}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black/20 backdrop-blur-sm rounded-full p-2 text-white hover:bg-black/40 transition-all duration-300"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black/10 backdrop-blur-sm rounded-full p-2 text-black hover:bg-black/20 transition-all duration-300"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
@@ -170,7 +170,7 @@ const MenuPage: React.FC = () => {
             )}
 
             {/* Image counter */}
-            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-white bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-black bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium border border-black/10">
               {selectedImageIndex + 1} / {menuImages.length}
             </div>
           </div>
