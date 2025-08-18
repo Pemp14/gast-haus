@@ -101,7 +101,7 @@ const MenuPage: React.FC = () => {
       </section>
 
       {/* Menu Images */}
-      <section className="section-padding bg-gradient-to-b from-light-gold via-cream to-warm-white">
+      <section className="py-8 lg:py-12 bg-gradient-to-b from-light-gold via-cream to-warm-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="space-y-8 lg:space-y-12">
             {menuImages.map((imageSrc, index) => (
@@ -172,14 +172,14 @@ const MenuPage: React.FC = () => {
       )}
 
       {/* Compact Contact Section */}
-      <div className="text-center py-6 bg-warm-white">
+      <div className="text-center py-10 lg:py-12 bg-warm-white">
         <div className="max-w-2xl mx-auto px-4">
-          <p className="text-charcoal mb-3 text-sm">{t('callNowReservation')}</p>
+          <p className="text-charcoal mb-4 text-base lg:text-lg">{t('callNowReservation')}</p>
           <button
             onClick={handleCall}
-            className="bg-charcoal text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-black transition-colors duration-300 flex items-center justify-center space-x-2 mx-auto"
+            className="bg-charcoal text-white px-8 py-3 rounded-full text-base font-medium hover:bg-black transition-colors duration-300 flex items-center justify-center space-x-2 mx-auto"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-5 w-5" />
             <span>{t('phone')}</span>
           </button>
         </div>
