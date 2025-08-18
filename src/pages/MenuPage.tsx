@@ -81,35 +81,17 @@ const MenuPage: React.FC = () => {
   return (
     <div className="pt-16 sm:pt-18 lg:pt-20">
       {/* Hero Section */}
-      <section className="relative py-16 lg:py-24 bg-gradient-to-b from-warm-white to-cream overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute top-20 right-10 w-40 h-40 border border-green-400/20 rounded-full animate-float hidden lg:block"></div>
-        <div className="absolute bottom-20 left-10 w-32 h-32 border-2 border-green-400/30 rounded-full animate-float animation-delay-1000 hidden lg:block"></div>
-        <div className="absolute top-1/2 right-1/4 w-6 h-6 bg-green-400/30 rounded-full animate-pulse hidden lg:block"></div>
-        
+      <section className="relative py-12 lg:py-16 bg-gradient-to-b from-warm-white to-cream">
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <div className="elegant-border mb-8">
-            <p className="text-green-400 font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
-              {t('culinaryExcellence')}
-            </p>
-          </div>
-          
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-charcoal mb-8 sm:mb-10 lg:mb-12 font-serif leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 sm:mb-8 font-serif leading-tight">
             {t('menu')}
           </h1>
           
-          <div className="section-divider mb-8 sm:mb-10 lg:mb-12"></div>
+          <div className="section-divider mb-6 sm:mb-8"></div>
           
-          <p className="text-base sm:text-lg lg:text-xl text-warm-gray max-w-4xl mx-auto leading-relaxed font-light mb-8 sm:mb-10 lg:mb-12">
+          <p className="text-base sm:text-lg text-warm-gray max-w-3xl mx-auto leading-relaxed font-light">
             {t('menuDescription')}
           </p>
-          
-          {/* Scroll Indicator */}
-          <div className="animate-bounce">
-            <div className="w-6 h-10 sm:w-8 sm:h-12 border-2 border-green-400 rounded-full flex justify-center mx-auto">
-              <div className="w-1 h-3 sm:h-4 bg-green-400 rounded-full mt-2 sm:mt-3 animate-pulse"></div>
-            </div>
-          </div>
         </div>
       </section>
 
