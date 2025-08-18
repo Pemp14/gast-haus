@@ -84,6 +84,7 @@ const translations = {
     nikkeiCuisineDesc: 'Fuziunea japonezo-peruană întâlnește eleganța europeană',
     ourStory: 'Povestea noastră',
     experienceCulinary: 'Experimentează excelența culinară în inima Chișinăului',
+    menuDescription: 'Pregătiți-vă pentru o călătorie gastronomică! Meniul nostru include preparate unice care combină tradițiile și accentele gustative moderne. Aici fiecare va găsi ceva pe plac – de la gustări rafinate la feluri de mâncare principale intense. Bucurați-vă de combinații excepționale de arome, care creează adevărate capodopere culinare.',
   },
   ru: {
     // Navigation
@@ -157,6 +158,7 @@ const translations = {
     nikkeiCuisineDesc: 'Японо-перуанская фьюжн встречается с европейской элегантностью',
     ourStory: 'Наша история',
     experienceCulinary: 'Испытайте кулинарное совершенство в сердце Кишинёва',
+    menuDescription: 'Приготовьтесь к гастрономическому путешествию! В нашем меню – уникальные блюда, которые сочетает в себе традиции и современные вкусовые акценты. Здесь каждый найдет что-то по душе – от утончённых закусок до насыщенных основных блюд. Наслаждайтесь исключительными вкусовыми сочетаниями, создающими настоящие кулинарные шедевры.',
   },
   en: {
     // Navigation
@@ -230,6 +232,7 @@ const translations = {
     nikkeiCuisineDesc: 'Japanese-Peruvian fusion meets European elegance',
     ourStory: 'Our Story',
     experienceCulinary: 'Experience culinary excellence in the heart of Chișinău',
+    menuDescription: 'Get ready for a gastronomic journey! Our menu features unique dishes that combine tradition with modern flavor accents. Here, everyone will find something to their liking – from delicate appetizers to rich main courses. Enjoy the exceptional flavor combinations that create true culinary masterpieces.',
   },
 };
 
