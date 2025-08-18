@@ -21,12 +21,20 @@ const MenuPage: React.FC = () => {
 
   // Массив изображений меню для текущего языка
   const menuImages = [
-    `/images/${getLanguagePrefix()}Meniu1.jpg`,
-    `/images/${getLanguagePrefix()}Meniu2.jpg`,
-    `/images/${getLanguagePrefix()}Meniu3.jpg`,
-    `/images/${getLanguagePrefix()}Meniu4.jpg`,
-    `/images/${getLanguagePrefix()}Meniu5.jpg`,
-    `/images/${getLanguagePrefix()}Meniu6.jpg`,
+    // Для тестирования используем разные изображения для каждого языка
+    currentLanguage === 'ru' ? [
+      'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=1200', // Суши для русского
+      'https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=1200', // Стейк
+      'https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=1200', // Салат
+    ] : currentLanguage === 'ro' ? [
+      'https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200', // Интерьер для румынского
+      'https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=1200', // Десерт
+      'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1200', // Кофе
+    ] : [
+      'https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=1200', // Ресторан для английского
+      'https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1200', // Атмосфера
+      'https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg?auto=compress&cs=tinysrgb&w=1200', // Кухня
+    ]
   ];
 
   return (
