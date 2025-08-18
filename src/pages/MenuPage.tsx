@@ -81,13 +81,24 @@ const MenuPage: React.FC = () => {
   return (
     <div className="pt-16 sm:pt-18 lg:pt-20">
       {/* Hero Section */}
-      <section className="relative py-12 lg:py-16 bg-gradient-to-b from-warm-white to-cream">
+      <section className="relative py-16 lg:py-20 bg-gradient-to-b from-warm-white to-cream overflow-hidden">
+        {/* Subtle decorative elements */}
+        <div className="absolute top-10 left-10 w-20 h-20 border border-green-400/20 rounded-full hidden lg:block"></div>
+        <div className="absolute bottom-10 right-10 w-16 h-16 border border-green-400/15 rounded-full hidden lg:block"></div>
+        
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
+          <div className="mb-6">
+            <div className="w-12 h-0.5 bg-green-400 mx-auto mb-4"></div>
+            <p className="text-green-400 font-medium text-sm tracking-[0.3em] uppercase">
+              {t('culinaryExcellence')}
+            </p>
+          </div>
+          
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 sm:mb-8 font-serif leading-tight">
             {t('menu')}
           </h1>
           
-          <div className="section-divider mb-6 sm:mb-8"></div>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto mb-8"></div>
           
           <p className="text-base sm:text-lg text-warm-gray max-w-3xl mx-auto leading-relaxed font-light">
             {t('menuDescription')}
