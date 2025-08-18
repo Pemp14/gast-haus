@@ -171,26 +171,19 @@ const MenuPage: React.FC = () => {
         </div>
       )}
 
-      {/* Call to Action */}
-      <section className="py-16 lg:py-20 bg-gradient-to-br from-warm-white via-light-gold to-cream">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <div className="bg-white/50 backdrop-blur-sm rounded-3xl p-8 lg:p-12 luxury-shadow border border-white/20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">
-              {t('readyToOrder')}
-            </h2>
-            <p className="text-lg lg:text-xl text-warm-gray mb-8 leading-relaxed font-light">
-              {t('callNowReservation')}
-            </p>
-            <button
-              onClick={handleCall}
-              className="luxury-button px-10 py-4 rounded-full text-lg font-semibold tracking-wide transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 mx-auto"
-            >
-              <Phone className="h-6 w-6" />
-              <span>{t('call')} {t('phone')}</span>
-            </button>
-          </div>
+      {/* Compact Contact Section */}
+      <div className="text-center py-6 bg-warm-white">
+        <div className="max-w-2xl mx-auto px-4">
+          <p className="text-charcoal mb-3 text-sm">{t('callNowReservation')}</p>
+          <button
+            onClick={handleCall}
+            className="bg-charcoal text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-black transition-colors duration-300 flex items-center justify-center space-x-2 mx-auto"
+          >
+            <Phone className="h-4 w-4" />
+            <span>{t('phone')}</span>
+          </button>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
