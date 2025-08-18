@@ -189,7 +189,7 @@ const GalleryModal = ({ selectedItem, isOpen, onClose, setSelectedItem, mediaIte
 
                 {/* Close Button */}
                 <motion.button
-                    className="absolute top-4 right-4 z-50
+                    className="absolute top-2 right-2 sm:top-4 sm:right-4 z-[60]
                               p-2 rounded-full bg-white/90 backdrop-blur-sm text-gray-800 
                               hover:bg-white transition-all duration-300 shadow-lg border border-gray-200/50"
                     onClick={onClose}
