@@ -81,17 +81,6 @@ const HeroCarousel: React.FC = () => {
               </div>
 
               {/* Content */}
-              <div className="relative z-10 h-full flex flex-col justify-start items-center text-center text-white px-6 sm:px-8 lg:px-12 pt-12 sm:pt-16 lg:pt-20">
-                <div className="max-w-4xl animate-fade-in bg-black/40 backdrop-blur-md rounded-3xl px-8 py-6 border border-white/20 shadow-2xl">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-white mb-4 tracking-wide leading-tight" 
-                      style={{
-                        textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.9), 0 1px 3px rgba(0, 0, 0, 1)',
-                        letterSpacing: '0.02em'
-                      }}>
-                    {slide.title}
-                  </h1>
-                </div>
-              </div>
             </div>
           ))}
         </div>
