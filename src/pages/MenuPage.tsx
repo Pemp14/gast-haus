@@ -40,21 +40,12 @@ const MenuPage: React.FC = () => {
   return (
     <div className="pt-16 sm:pt-18 lg:pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-warm-white to-cream overflow-hidden">
-        <div className="absolute top-10 right-10 w-40 h-40 border border-gold/20 rounded-full animate-float hidden lg:block"></div>
-        <div className="absolute bottom-20 left-10 w-32 h-32 border-2 border-gold/30 rounded-full animate-float animation-delay-1000 hidden lg:block"></div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <div className="elegant-border mb-8">
-            <p className="text-green-400 font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
-              {t('culinaryExcellence')}
-            </p>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6 sm:mb-8 font-serif">
+      <section className="relative py-12 lg:py-16 bg-gradient-to-br from-warm-white to-cream">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-4 font-serif">
             {t('menu')}
           </h1>
-          <div className="section-divider"></div>
-          <p className="text-lg lg:text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-base lg:text-lg text-warm-gray leading-relaxed font-light">
             {t('menuIntro')}
           </p>
         </div>
