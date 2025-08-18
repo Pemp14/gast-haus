@@ -172,12 +172,18 @@ const MenuPage: React.FC = () => {
       )}
 
       {/* Compact Contact Section */}
-      <div className="text-center py-10 lg:py-12 bg-warm-white">
+      <div className="text-center py-10 lg:py-12 bg-gradient-to-br from-light-gold via-cream to-warm-white relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-4 left-1/4 w-20 h-20 bg-green-400/10 rounded-full blur-xl"></div>
+          <div className="absolute bottom-4 right-1/4 w-16 h-16 bg-gold/10 rounded-full blur-lg"></div>
+        </div>
+        
         <div className="max-w-2xl mx-auto px-4">
           <p className="text-charcoal mb-4 text-base lg:text-lg">{t('callNowReservation')}</p>
           <button
             onClick={handleCall}
-            className="bg-charcoal text-white px-8 py-3 rounded-full text-base font-medium hover:bg-black transition-colors duration-300 flex items-center justify-center space-x-2 mx-auto"
+            className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full text-base font-medium transition-all duration-300 flex items-center justify-center space-x-2 mx-auto shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             <Phone className="h-5 w-5" />
             <span>{t('phone')}</span>
