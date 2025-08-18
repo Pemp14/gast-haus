@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       {/* Hero Title Section */}
-      <section className="pt-20 pb-8 bg-gradient-to-b from-warm-white to-cream">
+      <section className="pt-28 pb-12 bg-warm-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <div className="mb-8">
             <AnimatedText 
@@ -32,7 +32,7 @@ const HomePage: React.FC = () => {
       <HeroCarousel />
 
       {/* Quick Links Section */}
-<section className="bg-gradient-to-b from-warm-white to-cream pt-0 pb-18">
+<section className="bg-warm-white pt-0 pb-18">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">

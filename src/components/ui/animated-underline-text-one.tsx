@@ -57,14 +57,14 @@ const AnimatedText = React.forwardRef<HTMLDivElement, AnimatedTextProps>(
 
           <motion.svg
             width="100%"
-            height="20"
-            viewBox="0 0 300 20"
+            height="30"
+            viewBox="0 0 300 30"
             className={cn("absolute -bottom-4 left-0", underlineClassName)}
           >
             <motion.path
               d={underlinePath}
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="4"
               fill="none"
               variants={pathVariants}
               initial="hidden"
