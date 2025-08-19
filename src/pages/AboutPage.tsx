@@ -213,39 +213,27 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Additional Features Section */}
-      <section className="py-12 lg:py-16 bg-gradient-to-br from-cream to-warm-white">
+      <section className="py-8 lg:py-10 bg-gradient-to-br from-cream to-warm-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">
-              {t('additionalServices')}
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-4 font-serif">
+              {t('glovoDelivery')}
             </h2>
-            <div className="section-divider"></div>
+            <p className="text-lg text-warm-gray max-w-2xl mx-auto leading-relaxed font-light">
+              {t('glovoDescription')}
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
-              <div className="text-3xl mb-4">📶</div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Wi-Fi</h3>
-              <p className="text-warm-gray text-sm">{t('freeWifi')}</p>
-            </div>
-            
-            <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
-              <div className="text-3xl mb-4">💳</div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">{t('cardPayment')}</h3>
-              <p className="text-warm-gray text-sm">{t('cardPayment')}</p>
-            </div>
-            
-            <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
-              <div className="text-3xl mb-4">🚚</div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Glovo</h3>
-              <p className="text-warm-gray text-sm">{t('glovoDelivery')}</p>
-            </div>
-            
-            <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
-              <div className="text-3xl mb-4">🎉</div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">{t('banquetHall')}</h3>
-              <p className="text-warm-gray text-sm">{t('banquetHall')}</p>
-            </div>
+          <div className="flex justify-center">
+            <a
+              href="https://glovoapp.com/md/en/chisinau/gast-haus/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 luxury-shadow"
+            >
+              <span className="text-2xl">🚚</span>
+              <span>{t('orderOnGlovo')}</span>
+            </a>
           </div>
         </div>
       </section>

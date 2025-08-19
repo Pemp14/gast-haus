@@ -105,6 +105,9 @@ const translations = {
     cardPayment: 'Acceptăm toate tipurile de carduri',
     glovoDelivery: 'Comandați cu livrare acasă',
     banquetHall: 'Pentru evenimente speciale',
+    glovoDelivery: 'Livrare Glovo',
+    glovoDescription: 'Puteți comanda mâncarea din restaurantul nostru și prin Glovo',
+    orderOnGlovo: 'Comandă pe Glovo',
   },
   ru: {
     // Navigation
@@ -199,6 +202,9 @@ const translations = {
     cardPayment: 'Принимаем все виды карт',
     glovoDelivery: 'Заказывайте с доставкой на дом',
     banquetHall: 'Для особых мероприятий',
+    glovoDelivery: 'Доставка Glovo',
+    glovoDescription: 'Вы также можете заказать еду из нашего ресторана в Glovo',
+    orderOnGlovo: 'Заказать в Glovo',
   },
   en: {
     // Navigation
@@ -293,6 +299,9 @@ const translations = {
     cardPayment: 'We accept all types of cards',
     glovoDelivery: 'Order with home delivery',
     banquetHall: 'For special events',
+    glovoDelivery: 'Glovo Delivery',
+    glovoDescription: 'You can also order food from our restaurant through Glovo',
+    orderOnGlovo: 'Order on Glovo',
   },
 };
 
