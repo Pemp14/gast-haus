@@ -29,8 +29,6 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 border border-white/30 rounded-full animate-float hidden lg:block"></div>
-      <div className="absolute bottom-32 right-16 w-24 h-24 border border-white/20 rounded-full animate-float animation-delay-1000 hidden lg:block"></div>
 
       {/* Content */}
 <div className="relative z-10 text-left text-white px-4 sm:px-6 lg:px-12 max-w-4xl mx-auto animate-fade-in mt-20">

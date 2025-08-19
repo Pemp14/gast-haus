@@ -10,18 +10,13 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center">
           {/* Image */}
           <div className="relative animate-fade-in">
-            <div className="aspect-w-4 aspect-h-3 rounded-3xl overflow-hidden luxury-shadow">
+            <div className="rounded-3xl overflow-hidden luxury-shadow">
               <img
                 src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Restaurant interior"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -top-8 -right-8 w-32 h-32 border-2 border-gold/30 rounded-full hidden lg:block animate-float"></div>
-            <div className="absolute -bottom-8 -left-8 w-40 h-40 border border-gold/20 rounded-full hidden lg:block animate-float animation-delay-1000"></div>
-            <div className="absolute top-1/2 -left-4 w-8 h-8 bg-gold rounded-full hidden lg:block animate-pulse"></div>
           </div>
 
           {/* Content */}

@@ -85,11 +85,6 @@ const Header: React.FC = () => {
             aria-modal="true"
           >
             {/* Enhanced decorative elements */}
-            <div className="absolute top-20 right-10 w-32 h-32 border border-green-400/20 rounded-full animate-float"></div>
-            <div className="absolute bottom-32 left-10 w-24 h-24 border border-green-400/10 rounded-full animate-float animation-delay-1000"></div>
-            <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-green-400/30 rounded-full animate-pulse"></div>
-            <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-green-400/40 rounded-full animate-pulse animation-delay-500"></div>
-            
             {/* Subtle texture overlay */}
             <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
             

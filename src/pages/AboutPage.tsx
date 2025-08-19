@@ -8,9 +8,6 @@ const AboutPage: React.FC = () => {
     <div className="pt-16 sm:pt-18 lg:pt-20">
       {/* Hero Section */}
       <section className="relative py-8 lg:py-12 bg-gradient-to-br from-warm-white to-cream overflow-hidden">
-        <div className="absolute top-6 right-6 w-20 h-20 border border-gold/20 rounded-full animate-float hidden lg:block"></div>
-        <div className="absolute bottom-6 left-6 w-16 h-16 border border-gold/30 rounded-full animate-float animation-delay-1000 hidden lg:block"></div>
-        
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6 sm:mb-8 font-serif text-center">
             {t('about')}
@@ -46,18 +43,13 @@ const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16 lg:mb-24">
             {/* Image */}
             <div className="relative animate-fade-in">
-              <div className="aspect-w-4 aspect-h-3 rounded-3xl overflow-hidden luxury-shadow">
+              <div className="rounded-3xl overflow-hidden luxury-shadow">
                 <img
                   src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200"
                   alt="Restaurant interior"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -top-8 -right-8 w-32 h-32 border-2 border-gold/30 rounded-full hidden lg:block animate-float"></div>
-              <div className="absolute -bottom-8 -left-8 w-40 h-40 border border-gold/20 rounded-full hidden lg:block animate-float animation-delay-1000"></div>
-              <div className="absolute top-1/2 -left-4 w-8 h-8 bg-gold rounded-full hidden lg:block animate-pulse"></div>
             </div>
 
             {/* Content */}
@@ -150,7 +142,7 @@ const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Map */}
             <div className="relative">
-              <div className="aspect-w-16 aspect-h-12 rounded-3xl overflow-hidden luxury-shadow bg-gray-100">
+              <div className="rounded-3xl overflow-hidden luxury-shadow bg-gray-100">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.8234567890123!2d28.8356789!3d47.0245678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d3f04c6b50f%3A0x9eff6fa61b5fd3d3!2sGast%20Haus!5e0!3m2!1sen!2smd!4v1234567890123!5m2!1sen!2smd"
                   width="100%"
@@ -163,10 +155,6 @@ const AboutPage: React.FC = () => {
                   title="Gast Haus Location"
                 ></iframe>
               </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 border border-green-400/20 rounded-full hidden lg:block animate-float"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 border-2 border-green-400/30 rounded-full hidden lg:block animate-float animation-delay-1000"></div>
             </div>
 
             {/* Contact Info */}
