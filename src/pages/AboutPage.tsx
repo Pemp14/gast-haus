@@ -159,7 +159,7 @@ const AboutPage: React.FC = () => {
 
             {/* Contact Info */}
             <div className="space-y-6 lg:pl-8">
-              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow">
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow h-32 flex items-center">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-2xl">📍</span>
@@ -172,7 +172,7 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow">
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow h-32 flex items-center">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-2xl">🕒</span>
@@ -186,7 +186,7 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow">
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow h-32 flex items-center">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-2xl">📞</span>
