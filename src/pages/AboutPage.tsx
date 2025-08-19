@@ -144,7 +144,7 @@ const AboutPage: React.FC = () => {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden luxury-shadow bg-gray-100">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.8234567890123!2d28.8356789!3d47.0245678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d3f04c6b50f%3A0x9eff6fa61b5fd3d3!2sGast%20Haus!5e0!3m2!1sen!2smd!4v1234567890123!5m2!1sen!2smd"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.4!2d28.8356!3d47.0246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d3f04c6b50f%3A0x9eff6fa61b5fd3d3!2sChisinau%2C%20Moldova!5e0!3m2!1sen!2smd!4v1640995200000!5m2!1sen!2smd"
                   width="100%"
                   height="400"
                   style={{ border: 0 }}
