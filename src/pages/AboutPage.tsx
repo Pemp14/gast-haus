@@ -94,6 +94,16 @@ const AboutPage: React.FC = () => {
                     <p className="text-warm-gray">{t('terraceDiningDesc')}</p>
                   </div>
                 </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gold/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">💨</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-charcoal mb-2">{t('hookah')}</h3>
+                    <p className="text-warm-gray">{t('hookahDesc')}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
