@@ -75,11 +75,11 @@ const Header: React.FC = () => {
 
       {/* Mobile overlay menu */}
       {open && (
-        <div className="fixed inset-0 z-[100] backdrop-blur-[100px] bg-black/10" onClick={() => setOpen(false)}>
+        <div className="fixed inset-0 z-[100] backdrop-blur-xl bg-white/10" onClick={() => setOpen(false)}>
           <div
-            className="absolute inset-0 w-screen h-[100dvh] bg-gradient-to-br from-black/80 via-black/70 to-black/90 text-white shadow-2xl
+            className="absolute inset-0 w-screen h-[100dvh] bg-gradient-to-br from-black/40 via-black/30 to-black/50 text-white shadow-2xl
             pt-[calc(20px+env(safe-area-inset-top))] pb-[env(safe-area-inset-bottom)] px-6
-            overflow-y-auto overscroll-contain flex flex-col justify-center backdrop-blur-[50px] border border-white/30"
+            overflow-y-auto overscroll-contain flex flex-col justify-center backdrop-blur-md border border-white/10"
 
             onClick={(e) => e.stopPropagation()}
             role="dialog"
@@ -88,7 +88,7 @@ const Header: React.FC = () => {
             <div className="absolute top-6 right-6 z-10">
               <button
                 onClick={() => setOpen(false)}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-xl border border-white/30 hover:bg-white/30 transition-all duration-300 shadow-lg"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
                 aria-label="Close menu"
               >
                 <X className="h-6 w-6" />
@@ -97,8 +97,8 @@ const Header: React.FC = () => {
 
             <div className="flex flex-col items-center justify-center flex-1 max-w-sm mx-auto w-full relative">
               {/* Decorative elements */}
-              <div className="absolute top-10 left-4 w-20 h-20 border border-white/20 rounded-full animate-pulse"></div>
-              <div className="absolute bottom-20 right-6 w-16 h-16 border border-green-400/30 rounded-full animate-float"></div>
+              <div className="absolute top-10 left-4 w-20 h-20 border border-white/10 rounded-full animate-pulse"></div>
+              <div className="absolute bottom-20 right-6 w-16 h-16 border border-green-400/20 rounded-full animate-float"></div>
               
               <nav className="space-y-6 text-center w-full relative z-10">
                 {links.map((l) => (
@@ -106,7 +106,7 @@ const Header: React.FC = () => {
                     key={l.to}
                     to={l.to}
                     onClick={() => setOpen(false)}
-                    className="block py-4 px-6 rounded-2xl bg-white/15 backdrop-blur-xl border border-white/25 hover:bg-white/25 hover:border-green-400/50 text-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-lg"
+                    className="block py-4 px-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-green-400/30 text-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                   >
                     {l.label}
                   </Link>
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
               <div className="mt-10 w-full relative z-10">
                 <button
                   onClick={handleCall}
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-6 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl border border-green-500/30"
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-6 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-green-500/20"
                 >
                   {t('call')}
                 </button>
