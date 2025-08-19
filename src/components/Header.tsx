@@ -75,44 +75,56 @@ const Header: React.FC = () => {
 
       {/* Mobile overlay menu */}
       {open && (
-        <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm" onClick={() => setOpen(false)}>
+        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md" onClick={() => setOpen(false)}>
           <div
-            className="absolute inset-0 w-screen h-[100dvh] bg-soft-black text-white shadow-xl
-            pt-[calc(20px+env(safe-area-inset-top))] pb-[env(safe-area-inset-bottom)] px-6
-            overflow-y-auto overscroll-contain flex flex-col justify-center"
-
+            className="absolute inset-0 w-screen h-[100dvh] bg-gradient-to-br from-soft-black via-charcoal to-soft-black text-white
+            pt-[calc(20px+env(safe-area-inset-top))] pb-[env(safe-area-inset-bottom)] px-8
+            overflow-y-auto overscroll-contain flex flex-col justify-center relative"
             onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-modal="true"
           >
-            <div className="absolute top-6 right-6">
+            {/* Decorative elements */}
+            <div className="absolute top-20 right-10 w-32 h-32 border border-white/10 rounded-full animate-float hidden"></div>
+            <div className="absolute bottom-32 left-10 w-24 h-24 border border-white/5 rounded-full animate-float animation-delay-1000 hidden"></div>
+            
+            <div className="absolute top-6 right-6 z-10">
               <button
                 onClick={() => setOpen(false)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
                 aria-label="Close menu"
               >
-                <X className="h-5 w-5" />
+                <X className="h-6 w-6" />
               </button>
             </div>
 
-            <div className="flex flex-col items-center justify-center flex-1 max-w-sm mx-auto w-full">
-              <nav className="space-y-4 text-center w-full">
+            <div className="flex flex-col items-center justify-center flex-1 max-w-xs mx-auto w-full">
+              {/* Logo */}
+              <div className="mb-12">
+                <h2 className="text-3xl font-bold font-serif text-green-400 tracking-wider">
+                  Gast Haus
+                </h2>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto mt-3"></div>
+              </div>
+              
+              <nav className="space-y-2 text-center w-full mb-12">
                 {links.map((l) => (
                   <Link
                     key={l.to}
                     to={l.to}
                     onClick={() => setOpen(false)}
-                    className="block py-4 px-4 rounded-xl hover:bg-white/5 text-xl font-medium transition-colors duration-200"
+                    className="group block py-4 px-6 rounded-2xl hover:bg-white/10 text-lg font-medium transition-all duration-300 relative overflow-hidden"
                   >
-                    {l.label}
+                    <span className="relative z-10 tracking-wide">{l.label}</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </Link>
                 ))}
               </nav>
 
-              <div className="mt-8 w-full">
+              <div className="w-full">
                 <button
                   onClick={handleCall}
-                  className="w-full bg-green-600 hover:bg-green-700 px-6 py-4 rounded-xl font-semibold text-lg transition-colors duration-200"
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   {t('call')}
                 </button>
