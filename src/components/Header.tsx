@@ -75,11 +75,11 @@ const Header: React.FC = () => {
 
       {/* Mobile overlay menu */}
       {open && (
-        <div className="fixed inset-0 z-[100] backdrop-blur-3xl bg-black/20" onClick={() => setOpen(false)}>
+        <div className="fixed inset-0 z-[100] backdrop-blur-[100px] bg-black/10" onClick={() => setOpen(false)}>
           <div
-            className="absolute inset-0 w-screen h-[100dvh] bg-gradient-to-br from-black/60 via-black/50 to-black/70 text-white shadow-2xl
+            className="absolute inset-0 w-screen h-[100dvh] bg-gradient-to-br from-black/80 via-black/70 to-black/90 text-white shadow-2xl
             pt-[calc(20px+env(safe-area-inset-top))] pb-[env(safe-area-inset-bottom)] px-6
-            overflow-y-auto overscroll-contain flex flex-col justify-center backdrop-blur-2xl border border-white/20"
+            overflow-y-auto overscroll-contain flex flex-col justify-center backdrop-blur-[50px] border border-white/30"
 
             onClick={(e) => e.stopPropagation()}
             role="dialog"
