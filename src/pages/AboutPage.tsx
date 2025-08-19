@@ -139,78 +139,76 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            {/* Map */}
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden luxury-shadow bg-gray-100">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.4!2d28.8356!3d47.0246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d3f04c6b50f%3A0x9eff6fa61b5fd3d3!2sChisinau%2C%20Moldova!5e0!3m2!1sen!2smd!4v1640995200000!5m2!1sen!2smd"
-                  width="100%"
-                  height="400"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-full rounded-3xl"
-                  title="Gast Haus Location"
-                ></iframe>
+          {/* Map */}
+          <div className="relative mb-8 lg:mb-12">
+            <div className="rounded-3xl overflow-hidden luxury-shadow bg-gray-100 max-w-4xl mx-auto">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.4!2d28.8356!3d47.0246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c9c4b4b4b4b%3A0x1234567890abcdef!2sChisinau%2C%20Moldova!5e0!3m2!1sen!2smd!4v1640995200000!5m2!1sen!2smd"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full rounded-3xl"
+                title="Gast Haus Location"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Contact Info Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow h-32 flex items-center">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-2xl">📍</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-charcoal mb-2">Адрес</h3>
+                  <p className="text-warm-gray">Кишинёв, Молдова</p>
+                  <p className="text-warm-gray">ул. Примерная, 123</p>
+                </div>
               </div>
             </div>
 
-            {/* Contact Info */}
-            <div className="space-y-6 lg:pl-8">
-              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow h-32 flex items-center">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">📍</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Адрес</h3>
-                    <p className="text-warm-gray">Кишинёв, Молдова</p>
-                    <p className="text-warm-gray">ул. Примерная, 123</p>
-                  </div>
+            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow h-32 flex items-center">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-2xl">🕒</span>
                 </div>
-              </div>
-
-              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow h-32 flex items-center">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">🕒</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Часы работы</h3>
-                    <p className="text-warm-gray">Пн-Чт: 11:00 - 23:00</p>
-                    <p className="text-warm-gray">Пт-Сб: 11:00 - 01:00</p>
-                    <p className="text-warm-gray">Вс: 12:00 - 22:00</p>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-bold text-charcoal mb-2">Часы работы</h3>
+                  <p className="text-warm-gray">Пн-Чт: 11:00 - 23:00</p>
+                  <p className="text-warm-gray">Пт-Сб: 11:00 - 01:00</p>
+                  <p className="text-warm-gray">Вс: 12:00 - 22:00</p>
                 </div>
-              </div>
-
-              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow h-32 flex items-center">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">📞</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">Контакты</h3>
-                    <p className="text-warm-gray">+373 78 076 073</p>
-                    <p className="text-warm-gray">info@gasthaus.md</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="text-center pt-4">
-                <a
-                  href="https://www.google.com/maps/place/gasthaus/data=!4m2!3m1!1s0x40c97d3f04c6b50f:0x9eff6fa61b5fd3d3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 luxury-shadow"
-                >
-                  <span>🗺️</span>
-                  <span>Открыть в Google Maps</span>
-                </a>
               </div>
             </div>
+
+            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow h-32 flex items-center">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-2xl">📞</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-charcoal mb-2">Контакты</h3>
+                  <p className="text-warm-gray">+373 78 076 073</p>
+                  <p className="text-warm-gray">info@gasthaus.md</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center pt-8">
+            <a
+              href="https://www.google.com/maps/place/gasthaus/data=!4m2!3m1!1s0x40c97d3f04c6b50f:0x9eff6fa61b5fd3d3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 luxury-shadow"
+            >
+              <span>🗺️</span>
+              <span>Открыть в Google Maps</span>
+            </a>
           </div>
         </div>
       </section>
