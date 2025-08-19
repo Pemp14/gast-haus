@@ -115,45 +115,97 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Additional Info */}
+      {/* Location Map */}
       <section className="py-16 lg:py-20 bg-gradient-to-br from-warm-white to-light-gold">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">
-              {t('whyChooseGastHaus')}
-            </h2>
+            <div className="elegant-border mb-8">
+              <p className="text-green-400 font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
+                Найдите нас
+              </p>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">Наше местоположение</h2>
             <div className="section-divider"></div>
+            <p className="text-lg text-warm-gray max-w-3xl mx-auto leading-relaxed font-light">
+              Мы находимся в самом сердце Кишинёва. Приходите к нам и насладитесь незабываемой атмосферой!
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl">👨‍🍳</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Map */}
+            <div className="relative">
+              <div className="aspect-w-16 aspect-h-12 rounded-3xl overflow-hidden luxury-shadow bg-gray-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.8234567890123!2d28.8356789!3d47.0245678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97d3f04c6b50f%3A0x9eff6fa61b5fd3d3!2sGast%20Haus!5e0!3m2!1sen!2smd!4v1234567890123!5m2!1sen!2smd"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full rounded-3xl"
+                  title="Gast Haus Location"
+                ></iframe>
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-charcoal mb-4 font-serif">{t('expertChefs')}</h3>
-              <p className="text-warm-gray leading-relaxed">
-                {t('expertChefsDesc')}
-              </p>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 border border-green-400/20 rounded-full hidden lg:block animate-float"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 border-2 border-green-400/30 rounded-full hidden lg:block animate-float animation-delay-1000"></div>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl">🥘</span>
+            {/* Contact Info */}
+            <div className="space-y-6 lg:pl-8">
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">📍</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-charcoal mb-2">Адрес</h3>
+                    <p className="text-warm-gray">Кишинёв, Молдова</p>
+                    <p className="text-warm-gray">ул. Примерная, 123</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-charcoal mb-4 font-serif">{t('freshIngredients')}</h3>
-              <p className="text-warm-gray leading-relaxed">
-                {t('freshIngredientsDesc')}
-              </p>
-            </div>
 
-            <div className="text-center md:col-span-2 lg:col-span-1">
-              <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl">🏆</span>
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">🕒</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-charcoal mb-2">Часы работы</h3>
+                    <p className="text-warm-gray">Пн-Чт: 11:00 - 23:00</p>
+                    <p className="text-warm-gray">Пт-Сб: 11:00 - 01:00</p>
+                    <p className="text-warm-gray">Вс: 12:00 - 22:00</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl lg:text-2xl font-bold text-charcoal mb-4 font-serif">{t('awardWinning')}</h3>
-              <p className="text-warm-gray leading-relaxed">
-                {t('awardWinningDesc')}
-              </p>
+
+              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 luxury-shadow">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-400/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">📞</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-charcoal mb-2">Контакты</h3>
+                    <p className="text-warm-gray">+373 78 076 073</p>
+                    <p className="text-warm-gray">info@gasthaus.md</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center pt-4">
+                <a
+                  href="https://www.google.com/maps/place/gasthaus/data=!4m2!3m1!1s0x40c97d3f04c6b50f:0x9eff6fa61b5fd3d3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 luxury-shadow"
+                >
+                  <span>🗺️</span>
+                  <span>Открыть в Google Maps</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
