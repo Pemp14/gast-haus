@@ -77,16 +77,21 @@ const Header: React.FC = () => {
       {open && (
         <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md" onClick={() => setOpen(false)}>
           <div
-            className="absolute inset-0 w-screen h-[100dvh] bg-gradient-to-br from-soft-black via-charcoal to-soft-black text-white
+            className="absolute inset-0 w-screen h-[100dvh] bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white
             pt-[calc(20px+env(safe-area-inset-top))] pb-[env(safe-area-inset-bottom)] px-8
-            overflow-y-auto overscroll-contain flex flex-col justify-center relative"
+            overflow-y-auto overscroll-contain flex flex-col justify-center relative backdrop-blur-sm"
             onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-modal="true"
           >
-            {/* Decorative elements */}
-            <div className="absolute top-20 right-10 w-32 h-32 border border-white/10 rounded-full animate-float hidden"></div>
-            <div className="absolute bottom-32 left-10 w-24 h-24 border border-white/5 rounded-full animate-float animation-delay-1000 hidden"></div>
+            {/* Enhanced decorative elements */}
+            <div className="absolute top-20 right-10 w-32 h-32 border border-green-400/20 rounded-full animate-float"></div>
+            <div className="absolute bottom-32 left-10 w-24 h-24 border border-green-400/10 rounded-full animate-float animation-delay-1000"></div>
+            <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-green-400/30 rounded-full animate-pulse"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-green-400/40 rounded-full animate-pulse animation-delay-500"></div>
+            
+            {/* Subtle texture overlay */}
+            <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-transparent via-white/5 to-transparent"></div>
             
             <div className="absolute top-6 right-6 z-10">
               <button
