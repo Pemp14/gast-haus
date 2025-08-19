@@ -97,29 +97,6 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Features Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
-              <div className="text-3xl lg:text-4xl mb-4">🎵</div>
-              <div className="text-lg font-semibold text-charcoal">{t('liveMusic')}</div>
-            </div>
-            
-            <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
-              <div className="text-3xl lg:text-4xl mb-4">🌿</div>
-              <div className="text-lg font-semibold text-charcoal">{t('terrace')}</div>
-            </div>
-            
-            <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
-              <div className="text-3xl lg:text-4xl mb-4">💼</div>
-              <div className="text-lg font-semibold text-charcoal">{t('businessLunch')}</div>
-            </div>
-            
-            <div className="text-center p-6 lg:p-8 bg-gradient-to-br from-light-gold to-cream rounded-2xl luxury-shadow hover-lift">
-              <div className="text-3xl lg:text-4xl mb-4">🍽️</div>
-              <div className="text-lg font-semibold text-charcoal">{t('nikkeiCuisine')}</div>
-            </div>
-          </div>
         </div>
       </section>
 
