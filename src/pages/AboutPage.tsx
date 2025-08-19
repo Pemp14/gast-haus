@@ -165,8 +165,8 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-charcoal mb-2">Адрес</h3>
-                  <p className="text-warm-gray">Кишинёв, Молдова</p>
-                  <p className="text-warm-gray">ул. Примерная, 123</p>
+                  <p className="text-warm-gray">Strada Cojocarilor 17</p>
+                  <p className="text-warm-gray">Chisinau, Moldova</p>
                 </div>
               </div>
             </div>
@@ -178,9 +178,8 @@ const AboutPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-charcoal mb-2">Часы работы</h3>
-                  <p className="text-warm-gray">Пн-Чт: 11:00 - 23:00</p>
-                  <p className="text-warm-gray">Пт-Сб: 11:00 - 01:00</p>
-                  <p className="text-warm-gray">Вс: 12:00 - 22:00</p>
+                  <p className="text-warm-gray">Ежедневно</p>
+                  <p className="text-warm-gray">8:00 - 00:00</p>
                 </div>
               </div>
             </div>
@@ -193,7 +192,7 @@ const AboutPage: React.FC = () => {
                 <div>
                   <h3 className="text-xl font-bold text-charcoal mb-2">Контакты</h3>
                   <p className="text-warm-gray">+373 78 076 073</p>
-                  <p className="text-warm-gray">info@gasthaus.md</p>
+                  <p className="text-warm-gray">gasthaus.md</p>
                 </div>
               </div>
             </div>
@@ -201,7 +200,7 @@ const AboutPage: React.FC = () => {
 
           <div className="text-center pt-8">
             <a
-              href="https://www.google.com/maps/place/gasthaus/data=!4m2!3m1!1s0x40c97d3f04c6b50f:0x9eff6fa61b5fd3d3"
+              href="https://www.google.com/maps/place/Strada+Cojocarilor+17,+Chișinău,+Moldova"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 luxury-shadow"
@@ -209,6 +208,44 @@ const AboutPage: React.FC = () => {
               <span>🗺️</span>
               <span>Открыть в Google Maps</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Features Section */}
+      <section className="py-12 lg:py-16 bg-gradient-to-br from-cream to-warm-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">
+              Дополнительные услуги
+            </h2>
+            <div className="section-divider"></div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
+              <div className="text-3xl mb-4">📶</div>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Wi-Fi</h3>
+              <p className="text-warm-gray text-sm">Бесплатный интернет для гостей</p>
+            </div>
+            
+            <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
+              <div className="text-3xl mb-4">💳</div>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Оплата картой</h3>
+              <p className="text-warm-gray text-sm">Принимаем все виды карт</p>
+            </div>
+            
+            <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
+              <div className="text-3xl mb-4">🚚</div>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Доставка Glovo</h3>
+              <p className="text-warm-gray text-sm">Заказывайте с доставкой на дом</p>
+            </div>
+            
+            <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
+              <div className="text-3xl mb-4">🎉</div>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Банкетный зал</h3>
+              <p className="text-warm-gray text-sm">Для особых мероприятий</p>
+            </div>
           </div>
         </div>
       </section>
