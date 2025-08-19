@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       {/* Hero Title Section */}
-      <section className="pt-28 pb-12 bg-warm-white">
+      <section className="pt-36 pb-6 bg-warm-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <div className="mb-8">
             <AnimatedText 
