@@ -75,44 +75,48 @@ const Header: React.FC = () => {
 
       {/* Mobile overlay menu */}
       {open && (
-        <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm" onClick={() => setOpen(false)}>
+        <div className="fixed inset-0 z-[100] backdrop-blur-xl bg-white/10" onClick={() => setOpen(false)}>
           <div
-            className="absolute inset-0 w-screen h-[100dvh] bg-soft-black text-white shadow-xl
+            className="absolute inset-0 w-screen h-[100dvh] bg-gradient-to-br from-black/40 via-black/30 to-black/50 text-white shadow-2xl
             pt-[calc(20px+env(safe-area-inset-top))] pb-[env(safe-area-inset-bottom)] px-6
-            overflow-y-auto overscroll-contain flex flex-col justify-center"
+            overflow-y-auto overscroll-contain flex flex-col justify-center backdrop-blur-md border border-white/10"
 
             onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-modal="true"
           >
-            <div className="absolute top-6 right-6">
+            <div className="absolute top-6 right-6 z-10">
               <button
                 onClick={() => setOpen(false)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
                 aria-label="Close menu"
               >
-                <X className="h-5 w-5" />
+                <X className="h-6 w-6" />
               </button>
             </div>
 
-            <div className="flex flex-col items-center justify-center flex-1 max-w-sm mx-auto w-full">
-              <nav className="space-y-4 text-center w-full">
+            <div className="flex flex-col items-center justify-center flex-1 max-w-sm mx-auto w-full relative">
+              {/* Decorative elements */}
+              <div className="absolute top-10 left-4 w-20 h-20 border border-white/10 rounded-full animate-pulse"></div>
+              <div className="absolute bottom-20 right-6 w-16 h-16 border border-green-400/20 rounded-full animate-float"></div>
+              
+              <nav className="space-y-6 text-center w-full relative z-10">
                 {links.map((l) => (
                   <Link
                     key={l.to}
                     to={l.to}
                     onClick={() => setOpen(false)}
-                    className="block py-4 px-4 rounded-xl hover:bg-white/5 text-xl font-medium transition-colors duration-200"
+                    className="block py-4 px-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-green-400/30 text-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                   >
                     {l.label}
                   </Link>
                 ))}
               </nav>
 
-              <div className="mt-8 w-full">
+              <div className="mt-10 w-full relative z-10">
                 <button
                   onClick={handleCall}
-                  className="w-full bg-green-600 hover:bg-green-700 px-6 py-4 rounded-xl font-semibold text-lg transition-colors duration-200"
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-6 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-green-500/20"
                 >
                   {t('call')}
                 </button>
