@@ -7,14 +7,32 @@ const AboutPage: React.FC = () => {
   return (
     <div className="pt-16 sm:pt-18 lg:pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 bg-gradient-to-br from-warm-white to-cream overflow-hidden">
+      <section className="relative py-12 lg:py-16 bg-gradient-to-br from-warm-white to-cream overflow-hidden">
         <div className="absolute top-10 right-10 w-40 h-40 border border-gold/20 rounded-full animate-float hidden lg:block"></div>
         <div className="absolute bottom-20 left-10 w-32 h-32 border-2 border-gold/30 rounded-full animate-float animation-delay-1000 hidden lg:block"></div>
         
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6 sm:mb-8 font-serif">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-8 sm:mb-10 font-serif">
             {t('about')}
           </h1>
+          
+          <div className="max-w-3xl mx-auto space-y-6 text-base sm:text-lg text-warm-gray leading-relaxed font-light">
+            <p>
+              Добро пожаловать в Gast Haus – место, где встречаются традиции и современные вкусы. Мы стремимся предложить нашим гостям не только изысканные блюда, но и атмосферу уюта, где каждый момент станет особенным. Наши шеф-повара используют только лучшие ингредиенты, чтобы создать кулинарные шедевры, которые удовлетворят даже самых взыскательных гурманов.
+            </p>
+            
+            <p>
+              Мы гордимся нашей разнообразной кухней, которая сочетает в себе европейские и локальные традиции, а также уникальные рецепты, способные удивить и вдохновить. В Gast Haus каждый найдёт что-то по душе – от легких закусок до насыщенных основных блюд и изысканных десертов.
+            </p>
+            
+            <p>
+              Наши двери открыты для всех, кто ценит атмосферу уюта, внимательное обслуживание и, конечно же, неповторимый вкус.
+            </p>
+            
+            <p className="font-medium text-charcoal">
+              Присоединяйтесь к нам, чтобы насладиться гастрономическим путешествием, которое мы создали специально для вас.
+            </p>
+          </div>
         </div>
       </section>
 
