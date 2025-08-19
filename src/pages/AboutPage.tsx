@@ -12,15 +12,9 @@ const AboutPage: React.FC = () => {
         <div className="absolute bottom-20 left-10 w-32 h-32 border-2 border-gold/30 rounded-full animate-float animation-delay-1000 hidden lg:block"></div>
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <div className="elegant-border mb-8">
-            <p className="text-green-400 font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
-              {t('ourStory')}
-            </p>
-          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6 sm:mb-8 font-serif">
             {t('about')}
           </h1>
-          <div className="section-divider"></div>
         </div>
       </section>
 
