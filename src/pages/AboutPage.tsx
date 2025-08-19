@@ -16,21 +16,21 @@ const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 text-sm sm:text-base text-warm-gray leading-relaxed font-light">
             <div className="space-y-4">
               <p>
-                Добро пожаловать в Gast Haus – место, где встречаются традиции и современные вкусы. Мы стремимся предложить нашим гостям не только изысканные блюда, но и атмосферу уюта, где каждый момент станет особенным.
+                {t('aboutWelcome')}
               </p>
               
               <p>
-                Наши шеф-повара используют только лучшие ингредиенты, чтобы создать кулинарные шедевры, которые удовлетворят даже самых взыскательных гурманов.
+                {t('aboutChefs')}
               </p>
             </div>
             
             <div className="space-y-4">
               <p>
-                Мы гордимся нашей разнообразной кухней, которая сочетает в себе европейские и локальные традиции, а также уникальные рецепты, способные удивить и вдохновить.
+                {t('aboutDiversity')}
               </p>
               
               <p className="font-medium text-charcoal">
-                Присоединяйтесь к нам, чтобы насладиться гастрономическим путешествием, которое мы создали специально для вас.
+                {t('aboutJoinUs')}
               </p>
             </div>
           </div>
@@ -129,13 +129,13 @@ const AboutPage: React.FC = () => {
           <div className="text-center mb-12 lg:mb-16">
             <div className="elegant-border mb-8">
               <p className="text-green-400 font-medium text-sm sm:text-base lg:text-lg tracking-[0.2em] sm:tracking-[0.3em] uppercase mb-4">
-                Найдите нас
+                {t('findUs')}
               </p>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">Наше местоположение</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">{t('ourLocation')}</h2>
             <div className="section-divider"></div>
             <p className="text-lg text-warm-gray max-w-3xl mx-auto leading-relaxed font-light">
-              Мы находимся в самом сердце Кишинёва. Приходите к нам и насладитесь незабываемой атмосферой!
+              {t('locationDescription')}
             </p>
           </div>
 
@@ -164,7 +164,7 @@ const AboutPage: React.FC = () => {
                   <span className="text-2xl">📍</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-charcoal mb-2">Адрес</h3>
+                  <h3 className="text-xl font-bold text-charcoal mb-2">{t('address')}</h3>
                   <p className="text-warm-gray">Strada Cojocarilor 17</p>
                   <p className="text-warm-gray">Chisinau, Moldova</p>
                 </div>
@@ -177,8 +177,8 @@ const AboutPage: React.FC = () => {
                   <span className="text-2xl">🕒</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-charcoal mb-2">Часы работы</h3>
-                  <p className="text-warm-gray">Ежедневно</p>
+                  <h3 className="text-xl font-bold text-charcoal mb-2">{t('workingHours')}</h3>
+                  <p className="text-warm-gray">{t('daily')}</p>
                   <p className="text-warm-gray">8:00 - 00:00</p>
                 </div>
               </div>
@@ -190,7 +190,7 @@ const AboutPage: React.FC = () => {
                   <span className="text-2xl">📞</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-charcoal mb-2">Контакты</h3>
+                  <h3 className="text-xl font-bold text-charcoal mb-2">{t('contacts')}</h3>
                   <p className="text-warm-gray">+373 78 076 073</p>
                   <p className="text-warm-gray">gasthaus.md</p>
                 </div>
@@ -206,7 +206,7 @@ const AboutPage: React.FC = () => {
               className="inline-flex items-center space-x-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 luxury-shadow"
             >
               <span>🗺️</span>
-              <span>Открыть в Google Maps</span>
+              <span>{t('openInGoogleMaps')}</span>
             </a>
           </div>
         </div>
@@ -217,7 +217,7 @@ const AboutPage: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 font-serif">
-              Дополнительные услуги
+              {t('additionalServices')}
             </h2>
             <div className="section-divider"></div>
           </div>
@@ -226,25 +226,25 @@ const AboutPage: React.FC = () => {
             <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
               <div className="text-3xl mb-4">📶</div>
               <h3 className="text-lg font-semibold text-charcoal mb-2">Wi-Fi</h3>
-              <p className="text-warm-gray text-sm">Бесплатный интернет для гостей</p>
+              <p className="text-warm-gray text-sm">{t('freeWifi')}</p>
             </div>
             
             <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
               <div className="text-3xl mb-4">💳</div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Оплата картой</h3>
-              <p className="text-warm-gray text-sm">Принимаем все виды карт</p>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">{t('cardPayment')}</h3>
+              <p className="text-warm-gray text-sm">{t('cardPayment')}</p>
             </div>
             
             <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
               <div className="text-3xl mb-4">🚚</div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Доставка Glovo</h3>
-              <p className="text-warm-gray text-sm">Заказывайте с доставкой на дом</p>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">Glovo</h3>
+              <p className="text-warm-gray text-sm">{t('glovoDelivery')}</p>
             </div>
             
             <div className="text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl luxury-shadow hover-lift">
               <div className="text-3xl mb-4">🎉</div>
-              <h3 className="text-lg font-semibold text-charcoal mb-2">Банкетный зал</h3>
-              <p className="text-warm-gray text-sm">Для особых мероприятий</p>
+              <h3 className="text-lg font-semibold text-charcoal mb-2">{t('banquetHall')}</h3>
+              <p className="text-warm-gray text-sm">{t('banquetHall')}</p>
             </div>
           </div>
         </div>

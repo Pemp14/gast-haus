@@ -86,6 +86,25 @@ const translations = {
     ourStory: 'Povestea noastră',
     experienceCulinary: 'Experimentează excelența culinară în inima Chișinăului',
     menuDescription: 'Pregătiți-vă pentru o călătorie gastronomică! Meniul nostru include preparate unice care combină tradițiile și accentele gustative moderne. Aici fiecare va găsi ceva pe plac – de la gustări rafinate la feluri de mâncare principale intense. Bucurați-vă de combinații excepționale de arome, care creează adevărate capodopere culinare.',
+    
+    // About page specific translations
+    aboutWelcome: 'Bun venit la Gast Haus – locul unde se întâlnesc tradițiile și gusturile moderne. Ne străduim să oferim oaspeților noștri nu doar preparate rafinate, ci și o atmosferă de confort, unde fiecare moment devine special.',
+    aboutChefs: 'Bucătarii noștri folosesc doar cele mai bune ingrediente pentru a crea capodopere culinare care vor satisface chiar și cei mai pretențioși gurmezi.',
+    aboutDiversity: 'Ne mândrim cu bucătăria noastră diversă, care combină tradițiile europene și locale, precum și rețete unice, capabile să surprindă și să inspire.',
+    aboutJoinUs: 'Alăturați-vă nouă pentru a vă bucura de călătoria gastronomică pe care am creat-o special pentru voi.',
+    findUs: 'Găsiți-ne',
+    ourLocation: 'Locația noastră',
+    locationDescription: 'Ne aflăm în inima Chișinăului. Veniți la noi și bucurați-vă de o atmosferă de neuitat!',
+    address: 'Adresă',
+    workingHours: 'Ore de lucru',
+    contacts: 'Contacte',
+    daily: 'Zilnic',
+    openInGoogleMaps: 'Deschide în Google Maps',
+    additionalServices: 'Servicii suplimentare',
+    freeWifi: 'Wi-Fi gratuit pentru oaspeți',
+    cardPayment: 'Acceptăm toate tipurile de carduri',
+    glovoDelivery: 'Comandați cu livrare acasă',
+    banquetHall: 'Pentru evenimente speciale',
   },
   ru: {
     // Navigation
@@ -161,6 +180,25 @@ const translations = {
     ourStory: 'Наша история',
     experienceCulinary: 'Испытайте кулинарное совершенство в сердце Кишинёва',
     menuDescription: 'Приготовьтесь к гастрономическому путешествию! В нашем меню – уникальные блюда, которые сочетает в себе традиции и современные вкусовые акценты. Здесь каждый найдет что-то по душе – от утончённых закусок до насыщенных основных блюд. Наслаждайтесь исключительными вкусовыми сочетаниями, создающими настоящие кулинарные шедевры.',
+    
+    // About page specific translations
+    aboutWelcome: 'Добро пожаловать в Gast Haus – место, где встречаются традиции и современные вкусы. Мы стремимся предложить нашим гостям не только изысканные блюда, но и атмосферу уюта, где каждый момент станет особенным.',
+    aboutChefs: 'Наши шеф-повара используют только лучшие ингредиенты, чтобы создать кулинарные шедевры, которые удовлетворят даже самых взыскательных гурманов.',
+    aboutDiversity: 'Мы гордимся нашей разнообразной кухней, которая сочетает в себе европейские и локальные традиции, а также уникальные рецепты, способные удивить и вдохновить.',
+    aboutJoinUs: 'Присоединяйтесь к нам, чтобы насладиться гастрономическим путешествием, которое мы создали специально для вас.',
+    findUs: 'Найдите нас',
+    ourLocation: 'Наше местоположение',
+    locationDescription: 'Мы находимся в самом сердце Кишинёва. Приходите к нам и насладитесь незабываемой атмосферой!',
+    address: 'Адрес',
+    workingHours: 'Часы работы',
+    contacts: 'Контакты',
+    daily: 'Ежедневно',
+    openInGoogleMaps: 'Открыть в Google Maps',
+    additionalServices: 'Дополнительные услуги',
+    freeWifi: 'Бесплатный интернет для гостей',
+    cardPayment: 'Принимаем все виды карт',
+    glovoDelivery: 'Заказывайте с доставкой на дом',
+    banquetHall: 'Для особых мероприятий',
   },
   en: {
     // Navigation
@@ -236,6 +274,25 @@ const translations = {
     ourStory: 'Our Story',
     experienceCulinary: 'Experience culinary excellence in the heart of Chișinău',
     menuDescription: 'Get ready for a gastronomic journey! Our menu features unique dishes that combine tradition with modern flavor accents. Here, everyone will find something to their liking – from delicate appetizers to rich main courses. Enjoy the exceptional flavor combinations that create true culinary masterpieces.',
+    
+    // About page specific translations
+    aboutWelcome: 'Welcome to Gast Haus – a place where traditions meet modern tastes. We strive to offer our guests not only exquisite dishes, but also a cozy atmosphere where every moment becomes special.',
+    aboutChefs: 'Our chefs use only the finest ingredients to create culinary masterpieces that will satisfy even the most discerning gourmets.',
+    aboutDiversity: 'We pride ourselves on our diverse cuisine, which combines European and local traditions, as well as unique recipes capable of surprising and inspiring.',
+    aboutJoinUs: 'Join us to enjoy the gastronomic journey we have created especially for you.',
+    findUs: 'Find Us',
+    ourLocation: 'Our Location',
+    locationDescription: 'We are located in the very heart of Chișinău. Come to us and enjoy an unforgettable atmosphere!',
+    address: 'Address',
+    workingHours: 'Working Hours',
+    contacts: 'Contacts',
+    daily: 'Daily',
+    openInGoogleMaps: 'Open in Google Maps',
+    additionalServices: 'Additional Services',
+    freeWifi: 'Free internet for guests',
+    cardPayment: 'We accept all types of cards',
+    glovoDelivery: 'Order with home delivery',
+    banquetHall: 'For special events',
   },
 };
 
