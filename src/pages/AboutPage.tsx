@@ -143,7 +143,7 @@ const AboutPage: React.FC = () => {
           <div className="relative mb-8 lg:mb-12">
             <div className="rounded-3xl overflow-hidden luxury-shadow bg-gray-100 max-w-4xl mx-auto">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.4!2d28.8356!3d47.0246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c9c4b4b4b4b%3A0x1234567890abcdef!2sChisinau%2C%20Moldova!5e0!3m2!1sen!2smd!4v1640995200000!5m2!1sen!2smd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.4!2d28.8356!3d47.0246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c3c4b4b4b4b%3A0x1234567890abcdef!2sStrada%20Cojocarilor%2017%2C%20Chi%C8%99in%C4%83u%2C%20Moldova!5e0!3m2!1sen!2smd!4v1640995200000!5m2!1sen!2smd"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
