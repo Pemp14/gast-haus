@@ -129,9 +129,11 @@ const Header: React.FC = () => {
               <div className="w-full">
                 <button
                   onClick={handleCall}
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center space-x-3 relative overflow-hidden group"
                 >
-                  {t('call')}
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <Phone className="h-5 w-5 relative z-10 animate-pulse" />
+                  <span className="relative z-10 tracking-wide">{t('call')}</span>
                 </button>
               </div>
             </div>
