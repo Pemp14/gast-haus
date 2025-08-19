@@ -29,7 +29,9 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Hero Carousel Section */}
-      <HeroCarousel />
+      <div className="-mt-8">
+        <HeroCarousel />
+      </div>
 
       {/* Quick Links Section */}
 <section className="bg-warm-white pt-0 pb-18">
