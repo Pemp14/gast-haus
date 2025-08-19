@@ -356,19 +356,22 @@ const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ media
                                 drag
                                 dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                                 dragElastic={1}
+                               dragEnabled={window.innerWidth >= 640}
                                 onDragStart={() => setIsDragging(true)}
                                 onDragEnd={(e, info) => {
                                     setIsDragging(false);
-                                    const moveDistance = info.offset.x + info.offset.y;
-                                    if (Math.abs(moveDistance) > 50) {
-                                        const newItems = [...items];
-                                        const draggedItem = newItems[index];
-                                        const targetIndex = moveDistance > 0 ?
-                                            Math.min(index + 1, items.length - 1) :
-                                            Math.max(index - 1, 0);
-                                        newItems.splice(index, 1);
-                                        newItems.splice(targetIndex, 0, draggedItem);
-                                        setItems(newItems);
+                                    if (window.innerWidth >= 640) {
+                                        const moveDistance = info.offset.x + info.offset.y;
+                                        if (Math.abs(moveDistance) > 50) {
+                                            const newItems = [...items];
+                                            const draggedItem = newItems[index];
+                                            const targetIndex = moveDistance > 0 ?
+                                                Math.min(index + 1, items.length - 1) :
+                                                Math.max(index - 1, 0);
+                                            newItems.splice(index, 1);
+                                            newItems.splice(targetIndex, 0, draggedItem);
+                                            setItems(newItems);
+                                        }
                                     }
                                 }}
                             >
