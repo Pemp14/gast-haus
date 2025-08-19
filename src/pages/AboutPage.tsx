@@ -9,35 +9,29 @@ const AboutPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-8 lg:py-12 bg-gradient-to-br from-warm-white to-cream overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-8 lg:mb-12 font-serif text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal mb-6 sm:mb-8 font-serif text-center">
             {t('about')}
           </h1>
           
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 lg:p-12 luxury-shadow">
-              <div className="space-y-6 text-base lg:text-lg text-warm-gray leading-relaxed">
-                <p>
-                  Добро пожаловать в Gast Haus – место, где встречаются традиции и современные вкусы. Мы стремимся предложить нашим гостям не только изысканные блюда, но и атмосферу уюта, где каждый момент станет особенным.
-                </p>
-                
-                <p>
-                  Наши шеф-повара используют только лучшие ингредиенты, чтобы создать кулинарные шедевры, которые удовлетворят даже самых взыскательных гурманов.
-                </p>
-                
-                <p>
-                  Мы гордимся нашей разнообразной кухней, которая сочетает в себе европейские и локальные традиции, а также уникальные рецепты, способные удивить и вдохновить. В Gast Haus каждый найдёт что-то по душе – от легких закусок до насыщенных основных блюд и изысканных десертов.
-                </p>
-                
-                <p>
-                  Наши двери открыты для всех, кто ценит атмосферу уюта, внимательное обслуживание и, конечно же, неповторимый вкус.
-                </p>
-                
-                <div className="pt-4 border-t border-green-400/20">
-                  <p className="text-charcoal font-medium text-lg lg:text-xl">
-                    Присоединяйтесь к нам, чтобы насладиться гастрономическим путешествием, которое мы создали специально для вас.
-                  </p>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 text-sm sm:text-base text-warm-gray leading-relaxed font-light">
+            <div className="space-y-4">
+              <p>
+                Добро пожаловать в Gast Haus – место, где встречаются традиции и современные вкусы. Мы стремимся предложить нашим гостям не только изысканные блюда, но и атмосферу уюта, где каждый момент станет особенным.
+              </p>
+              
+              <p>
+                Наши шеф-повара используют только лучшие ингредиенты, чтобы создать кулинарные шедевры, которые удовлетворят даже самых взыскательных гурманов.
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              <p>
+                Мы гордимся нашей разнообразной кухней, которая сочетает в себе европейские и локальные традиции, а также уникальные рецепты, способные удивить и вдохновить.
+              </p>
+              
+              <p className="font-medium text-charcoal">
+                Присоединяйтесь к нам, чтобы насладиться гастрономическим путешествием, которое мы создали специально для вас.
+              </p>
             </div>
           </div>
         </div>
