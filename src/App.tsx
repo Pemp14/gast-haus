@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
+import SplashScreen from './components/SplashScreen';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -9,6 +11,20 @@ import GalleryPage from './pages/GalleryPage';
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  const handleSplashComplete = () => {
+    setShowSplash(false);
+  };
+
+  if (showSplash) {
+    return (
+      <LanguageProvider>
+        <SplashScreen onComplete={handleSplashComplete} />
+      </LanguageProvider>
+    );
+  }
+
   return (
     <LanguageProvider>
       <Router>
