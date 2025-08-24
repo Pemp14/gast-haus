@@ -10,35 +10,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div>
-      {/* Hero Title Section */}
-      <section className="pt-28 pb-3 bg-gradient-to-b from-warm-white via-cream to-warm-white relative overflow-hidden">
-        {/* Декоративные элементы */}
-        <div className="absolute top-10 left-10 w-16 h-16 border border-green-400/10 rounded-full hidden lg:block animate-pulse"></div>
-        <div className="absolute top-20 right-16 w-12 h-12 border border-green-400/15 rounded-full hidden lg:block animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-8 left-1/4 w-8 h-8 border border-green-400/20 rounded-full hidden lg:block animate-pulse" style={{animationDelay: '2s'}}></div>
-        
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <div className="mb-8">
-            {/* Верхняя линия */}
-            <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto mb-4"></div>
-            <p className="text-green-400 font-medium text-xs sm:text-sm tracking-[0.3em] uppercase mb-6">
-              {t('culinaryExcellence')}
-            </p>
-            
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-charcoal leading-tight mb-6">
-              {t('welcomeToGastHaus')}
-            </h1>
-          </div>
-          
-          {/* Нижняя линия */}
-          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto mb-6"></div>
-          
-          <p className="text-base sm:text-lg lg:text-xl text-warm-gray max-w-3xl mx-auto leading-relaxed font-light">
-            {t('experienceCulinary')}
-          </p>
-        </div>
-      </section>
-
       {/* Hero Carousel Section */}
       <HeroCarousel />
 
