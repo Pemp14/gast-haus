@@ -21,7 +21,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
   return (
     <div className="splash-screen">
       <div className="click-hint">
-        click to enter
+        click the burger to enter
       </div>
       <div>
         <label className="sprite" htmlFor="select" onClick={handleBurgerClick}></label>
