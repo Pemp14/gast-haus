@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 import { LanguageProvider } from './contexts/LanguageContext';
-import WelcomeScreen from './components/WelcomeScreen';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -11,20 +9,6 @@ import GalleryPage from './pages/GalleryPage';
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-  const [showWelcome, setShowWelcome] = useState(true);
-
-  const handleStart = () => {
-    setShowWelcome(false);
-  };
-
-  if (showWelcome) {
-    return (
-      <LanguageProvider>
-        <WelcomeScreen onStart={handleStart} />
-      </LanguageProvider>
-    );
-  }
-
   return (
     <LanguageProvider>
       <Router>
