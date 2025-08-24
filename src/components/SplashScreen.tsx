@@ -19,7 +19,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
   };
 
   return (
-    <div className="splash-screen">
+    <div className={`splash-screen ${isClicked ? 'clicked' : ''}`}>
       <div className="click-hint">
         click the burger to enter
       </div>
@@ -27,6 +27,11 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         <label className="sprite" htmlFor="select" onClick={handleBurgerClick}></label>
         <input type="checkbox" id="select" checked={isClicked} readOnly />
       </div>
+      {isClicked && (
+        <div className="welcome-text">
+          Welcome to Gast Haus
+        </div>
+      )}
     </div>
   );
 };
