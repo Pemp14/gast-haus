@@ -12,10 +12,10 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
   const handleBurgerClick = () => {
     if (!isClicked) {
       setIsClicked(true);
-      // Через 5 секунд закрываем splash screen
+      // Через 9 секунд закрываем splash screen
       setTimeout(() => {
         onComplete();
-      }, 5000);
+      }, 9000);
     }
   };
 
@@ -31,7 +31,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
       {isClicked && (
         <div className="morphing-text-container">
           <MorphingText 
-            texts={["Welcome", "to", "Gast Haus"]} 
+            texts={["Welcome", "to", "Gast", "Haus"]} 
             className="text-white"
           />
         </div>
