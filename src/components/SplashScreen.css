@@ -30,14 +30,6 @@
   transform: scale(0.95);
 }
 
-.splash-screen:not(:hover) .sprite {
-  animation: to-start 0s !important;
-}
-
-.splash-screen:not(:hover) .sprite:after {
-  animation: to-start 0s !important;
-}
-
 .sprite {
   margin: 0 auto;
 }
@@ -140,12 +132,19 @@ input[type="checkbox"] {
   animation: frame var(--sprite-as) var(--sprite-at) 0s var(--sprite-ai) var(--sprite-ad) var(--sprite-af) var(--sprite-ap);
 }
 
+.sprite:has(+ input:checked):before {
+  bottom: calc(-25% - 50px);
+  scale: .75;
+  filter: contrast(0) brightness(0.15) blur(5px);
+  animation: frame var(--sprite-as) var(--sprite-at) 0s var(--sprite-ai) var(--sprite-ad) var(--sprite-af) var(--sprite-ap);
+}
+
 .sprite:hover {
   top: 0;
   /* animation duration based on frame rate */
   animation: frame var(--sprite-as) var(--sprite-at) 0s var(--sprite-ai) var(--sprite-ad) var(--sprite-af) var(--sprite-ap);
 }
-
+}
 .sprite:hover:before {
   bottom: calc(-25% - 50px);
   scale: .75;
