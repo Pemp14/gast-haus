@@ -111,7 +111,7 @@ const MenuPage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="space-y-8 lg:space-y-12">
             {menuImages.map((imageSrc, index) => (
-              <div key={index} className="animate-slide-up group cursor-pointer" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div key={index} className="group cursor-pointer">
                 <div 
                   className="relative overflow-hidden rounded-3xl luxury-shadow hover-lift transition-all duration-500"
                   onClick={() => openModal(index)}

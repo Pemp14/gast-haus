@@ -42,7 +42,7 @@ const AboutPage: React.FC = () => {
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16 lg:mb-24">
             {/* Image */}
-            <div className="relative animate-fade-in">
+            <div className="relative">
               <div className="rounded-3xl overflow-hidden luxury-shadow">
                 <img
                   src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -53,7 +53,7 @@ const AboutPage: React.FC = () => {
             </div>
 
             {/* Content */}
-            <div className="lg:pl-12 animate-slide-up">
+            <div className="lg:pl-12">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 sm:mb-8 font-serif leading-tight">
                 {t('culinaryExcellence')}
               </h2>

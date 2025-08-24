@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import HeroCarousel from '../components/HeroCarousel';
-import { AnimatedText } from '../components/ui/animated-underline-text-one';
 
 const HomePage: React.FC = () => {
   const { t } = useLanguage();
@@ -26,12 +25,9 @@ const HomePage: React.FC = () => {
               {t('culinaryExcellence')}
             </p>
             
-            <AnimatedText 
-              text={t('welcomeToGastHaus')}
-              textClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-charcoal leading-tight"
-              underlineClassName="text-green-400"
-              underlineDuration={2}
-            />
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-bold text-charcoal leading-tight mb-6">
+              {t('welcomeToGastHaus')}
+            </h1>
           </div>
           
           {/* Нижняя линия */}
