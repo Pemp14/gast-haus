@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { MorphingText } from './ui/morphing-text';
 import './SplashScreen.css';
 
 interface SplashScreenProps {
@@ -28,8 +29,11 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
         <input type="checkbox" id="select" checked={isClicked} readOnly />
       </div>
       {isClicked && (
-        <div className="welcome-text">
-          Welcome to Gast Haus
+        <div className="morphing-text-container">
+          <MorphingText 
+            texts={["Welcome", "to", "Gast Haus"]} 
+            className="text-white"
+          />
         </div>
       )}
     </div>

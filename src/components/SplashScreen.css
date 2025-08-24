@@ -51,27 +51,22 @@
 }
 
 .splash-screen.clicked .sprite {
-  transform: translateY(120px);
+  transform: translateY(180px);
   transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.welcome-text {
+.morphing-text-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 6vw, 4rem);
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
-  text-align: center;
-  letter-spacing: 2px;
+  width: 90%;
+  max-width: 600px;
   opacity: 0;
-  animation: fadeInWelcome 1.5s ease-out 1s forwards;
-  text-shadow: 0 2px 20px rgba(255, 255, 255, 0.3);
+  animation: fadeInMorphing 1.5s ease-out 1s forwards;
 }
 
-@keyframes fadeInWelcome {
+@keyframes fadeInMorphing {
   0% {
     opacity: 0;
     transform: translateX(-50%) translateY(-30%);
