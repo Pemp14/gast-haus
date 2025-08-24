@@ -144,7 +144,6 @@ input[type="checkbox"] {
   /* animation duration based on frame rate */
   animation: frame var(--sprite-as) var(--sprite-at) 0s var(--sprite-ai) var(--sprite-ad) var(--sprite-af) var(--sprite-ap);
 }
-}
 .sprite:hover:before {
   bottom: calc(-25% - 50px);
   scale: .75;
