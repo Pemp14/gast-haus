@@ -20,6 +20,9 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
 
   return (
     <div className="splash-screen">
+      <div className="click-hint">
+        click to enter
+      </div>
       <div>
         <label className="sprite" htmlFor="select" onClick={handleBurgerClick}></label>
         <input type="checkbox" id="select" checked={isClicked} readOnly />
