@@ -92,24 +92,24 @@ const MenuPage: React.FC = () => {
             <CircularRevealHeading
               items={[
                 {
-                  text: t('fast').toUpperCase(),
+                  text: t('fast'),
                   image: "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=800"
                 },
                 {
-                  text: t('aromatic').toUpperCase(),
+                  text: t('aromatic'),
                   image: "https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=800"
                 },
                 {
-                  text: t('tasty').toUpperCase(),
+                  text: t('tasty'),
                   image: "https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=800"
                 },
                 {
-                  text: t('tender').toUpperCase(),
+                  text: t('tender'),
                   image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800"
                 }
               ]}
               centerText={
-                <div className="text-xl font-bold text-[#444444]" style={{ fontFamily: 'Fredoka One, cursive' }}>
+                <div className="text-xl font-bold text-[#444444] font-serif">
                   {t('menu')}
                 </div>
               }

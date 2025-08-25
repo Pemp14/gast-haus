@@ -19,30 +19,30 @@ interface CircularRevealHeadingProps {
 const sizeConfig = {
     sm: {
         container: 'h-[300px] w-[300px]',
-        fontSize: 'text-xs',
-        tracking: 'tracking-[0.25em]',
+        fontSize: 'text-sm',
+        tracking: 'tracking-[0.2em]',
         radius: 160,
         gap: 40,
         imageSize: 'w-[75%] h-[75%]',
-        textStyle: 'font-medium'
+        textStyle: 'font-serif font-medium'
     },
     md: {
         container: 'h-[400px] w-[400px]',
-        fontSize: 'text-sm',
-        tracking: 'tracking-[0.3em]',
+        fontSize: 'text-base',
+        tracking: 'tracking-[0.2em]',
         radius: 160,
         gap: 30,
         imageSize: 'w-[75%] h-[75%]',
-        textStyle: 'font-medium',
+        textStyle: 'font-serif font-medium',
     },
     lg: {
         container: 'h-[500px] w-[500px]',
-        fontSize: 'text-base',
-        tracking: 'tracking-[0.35em]',
+        fontSize: 'text-lg',
+        tracking: 'tracking-[0.2em]',
         radius: 160,
         gap: 20,
         imageSize: 'w-[75%] h-[75%]',
-        textStyle: 'font-medium'
+        textStyle: 'font-serif font-medium'
     }
 };
 
