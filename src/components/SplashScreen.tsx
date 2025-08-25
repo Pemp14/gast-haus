@@ -9,6 +9,7 @@ interface SplashScreenProps {
 const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [showText, setShowText] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
 
   const handleBurgerClick = () => {
     if (!isClicked) {
@@ -17,15 +18,19 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
       setTimeout(() => {
         setShowText(true);
       }, 2000);
-      // Через 9 секунд закрываем splash screen
+      // Через 8 секунд начинаем анимацию выхода
       setTimeout(() => {
-        onComplete();
-      }, 9000);
+        setIsExiting(true);
+        // Через 1 секунду полностью закрываем
+        setTimeout(() => {
+          onComplete();
+        }, 1000);
+      }, 8000);
     }
   };
 
   return (
-    <div className="splash-screen">
+    <div className={`splash-screen ${isExiting ? 'exiting' : ''}`}>
       <div className="click-hint">
         click the burger to enter
       </div>

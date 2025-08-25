@@ -22,7 +22,15 @@
   justify-content: center;
   padding: 1rem;
   box-sizing: border-box;
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.splash-screen.exiting {
+  opacity: 0;
+  transform: scale(0.95);
+  filter: blur(10px);
 }
 
 .click-hint {
