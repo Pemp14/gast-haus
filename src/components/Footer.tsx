@@ -1,59 +1,68 @@
-import React, { useState, useEffect } from 'react';
-import { MorphingText } from './ui/morphing-text';
-import './SplashScreen.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Instagram, Facebook } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
-interface SplashScreenProps {
-  onComplete: () => void;
-}
+const Footer: React.FC = () => {
+  const { t } = useLanguage();
 
-const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
-  const [isClicked, setIsClicked] = useState(false);
-  const [showText, setShowText] = useState(false);
-  const [isExiting, setIsExiting] = useState(false);
-
-  const handleBurgerClick = () => {
-    if (!isClicked) {
-      setIsClicked(true);
-      // Показываем текст через 2 секунды после клика
-      setTimeout(() => {
-        setShowText(true);
-      }, 2000);
-      // Через 8.5 секунд начинаем анимацию выхода (2 + 1.5 + 1 + 2 + 1)
-      setTimeout(() => {
-        setIsExiting(true);
-        // Через 1 секунду полностью закрываем
-        setTimeout(() => {
-          onComplete();
-        }, 1000);
-      }, 8500);
-    }
-  };
+  const quickLinks = [
+    { key: 'home', path: '/' },
+    { key: 'menu', path: '/menu' },
+    { key: 'about', path: '/about' },
+    { key: 'gallery', path: '/gallery' },
+  ];
 
   return (
-    <div className={`splash-screen ${isExiting ? 'exiting' : ''}`}>
-      <div className="click-hint">
-        click the burger to enter
-      </div>
-      <div 
-        className="sprite-container"
-        style={{
-          transform: isClicked ? 'translateY(180px)' : 'translateY(0)',
-          transition: 'transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-        }}
-      >
-        <label className="sprite" htmlFor="select" onClick={handleBurgerClick}></label>
-        <input type="checkbox" id="select" checked={isClicked} readOnly />
-      </div>
-      {showText && (
-        <div className="morphing-text-container">
-          <MorphingText 
-            texts={['Welcome', 'to', 'Gast Haus']}
-            className="text-white"
-          />
+    <footer className="bg-gradient-to-r from-soft-black to-charcoal text-white py-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+          {/* Logo and Copyright */}
+          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+            <Link to="/" className="flex items-center">
+              <h3 className="text-xl font-bold font-serif text-green-400">Gast Haus</h3>
+            </Link>
+            <p className="text-white/60 text-sm">
+              {t('copyright')}
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div className="flex items-center space-x-6">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.key}
+                to={link.path}
+                className="text-white/70 hover:text-green-400 transition-colors text-sm font-medium"
+              >
+                {t(link.key)}
+              </Link>
+            ))}
+          </div>
+
+          {/* Social Links */}
+          <div className="flex items-center space-x-3">
+            <a
+              href="https://instagram.com/gasthaus.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-white/10 rounded-full text-white hover:bg-green-500 hover:text-white transition-all duration-300"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href="https://facebook.com/gasthaus.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-white/10 rounded-full text-white hover:bg-green-500 hover:text-white transition-all duration-300"
+            >
+              <Facebook className="h-4 w-4" />
+            </a>
+          </div>
         </div>
-      )}
-    </div>
+      </div>
+    </footer>
   );
 };
 
-export default SplashScreen;
+export default Footer;
