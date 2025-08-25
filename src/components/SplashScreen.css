@@ -63,7 +63,8 @@
 
 .morphing-text-container .relative {
   font-size: 3.5rem !important;
-  font-weight: 700 !important;
+  font-family: 'Fredoka One', cursive !important;
+  font-weight: 400 !important;
   letter-spacing: 0.05em !important;
   line-height: 1.1 !important;
 }
