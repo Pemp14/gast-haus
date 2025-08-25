@@ -5,8 +5,8 @@ import { useCallback, useEffect, useRef } from "react";
 
 import { cn } from "@/lib/utils";
 
-const morphTime = 2.0;
-const cooldownTime = 1.5;
+const morphTime = 1.8;
+const cooldownTime = 2.5;
 
 const useMorphingText = (texts: string[]) => {
   const textIndexRef = useRef(0);
@@ -14,10 +14,17 @@ const useMorphingText = (texts: string[]) => {
   const cooldownRef = useRef(0);
   const timeRef = useRef(new Date());
   const [isComplete, setIsComplete] = useState(false);
+  const [currentWordStartTime, setCurrentWordStartTime] = useState(0);
 
   const text1Ref = useRef<HTMLSpanElement>(null);
   const text2Ref = useRef<HTMLSpanElement>(null);
 
+  // Настройки времени для каждого слова (в секундах)
+  const wordTimings = [
+    3.0, // "Welcome" - показывается 3 секунды
+    1.5, // "to" - показывается 1.5 секунды  
+    0,   // "Gast Haus" - остается навсегда
+  ];
   const setStyles = useCallback(
     (fraction: number) => {
       const [current1, current2] = [text1Ref.current, text2Ref.current];
@@ -43,6 +50,18 @@ const useMorphingText = (texts: string[]) => {
       return;
     }
 
+    // Проверяем, нужно ли переходить к следующему слову
+    const currentTime = new Date().getTime();
+    const currentWordIndex = textIndexRef.current;
+    const wordDuration = wordTimings[currentWordIndex] * 1000; // в миллисекундах
+    
+    if (currentWordStartTime === 0) {
+      setCurrentWordStartTime(currentTime);
+    }
+    
+    if (currentTime - currentWordStartTime < wordDuration) {
+      return; // Еще не время переходить к следующему слову
+    }
     morphRef.current -= cooldownRef.current;
     cooldownRef.current = 0;
 
@@ -57,8 +76,9 @@ const useMorphingText = (texts: string[]) => {
 
     if (fraction === 1) {
       textIndexRef.current++;
+      setCurrentWordStartTime(0); // Сбрасываем время для следующего слова
     }
-  }, [setStyles]);
+  }, [setStyles, texts.length, wordTimings, currentWordStartTime]);
 
   const doCooldown = useCallback(() => {
     morphRef.current = 0;
