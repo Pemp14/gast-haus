@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           {/* Logo and Copyright */}
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
             <Link to="/" className="flex items-center">
-              <h3 className="text-xl font-bold font-serif text-green-400">Gast Haus</h3>
+              <h3 className="text-xl font-bold text-green-400" style={{ fontFamily: 'Fredoka One, cursive' }}>Gast Haus</h3>
             </Link>
             <p className="text-white/60 text-sm">
               {t('copyright')}
