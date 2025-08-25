@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { CircularRevealHeading } from '../components/ui/circular-reveal-heading';
 
 const MenuPage: React.FC = () => {
   const { t, currentLanguage } = useLanguage();
@@ -87,9 +88,34 @@ const MenuPage: React.FC = () => {
         <div className="absolute bottom-10 right-10 w-16 h-16 border border-green-400/15 rounded-full hidden lg:block"></div>
         
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 sm:mb-8 font-serif leading-tight">
-            {t('menu')}
-          </h1>
+          <div className="flex justify-center mb-6 sm:mb-8">
+            <CircularRevealHeading
+              items={[
+                {
+                  text: "APPETIZERS",
+                  image: "https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=800"
+                },
+                {
+                  text: "MAIN DISHES", 
+                  image: "https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=800"
+                },
+                {
+                  text: "DESSERTS",
+                  image: "https://images.pexels.com/photos/140831/pexels-photo-140831.jpeg?auto=compress&cs=tinysrgb&w=800"
+                },
+                {
+                  text: "BEVERAGES",
+                  image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800"
+                }
+              ]}
+              centerText={
+                <div className="text-2xl font-bold text-[#444444]" style={{ fontFamily: 'Fredoka One, cursive' }}>
+                  🍽️
+                </div>
+              }
+              size="md"
+            />
+          </div>
           
           <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto mb-8"></div>
           
