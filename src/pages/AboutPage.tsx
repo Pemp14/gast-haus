@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import AnimatedButton from '../components/ui/animated-button';
 
 const AboutPage: React.FC = () => {
   const { t } = useLanguage();
@@ -123,15 +124,9 @@ const AboutPage: React.FC = () => {
           </div>
 
           <div className="flex justify-center">
-            <a
-              href="https://glovoapp.com/md/en/chisinau/gast-haus/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 luxury-shadow"
-            >
-              <span className="text-2xl">🚚</span>
-              <span>{t('orderOnGlovo')}</span>
-            </a>
+            <AnimatedButton href="https://glovoapp.com/md/en/chisinau/gast-haus/">
+              {t('orderOnGlovo')}
+            </AnimatedButton>
           </div>
         </div>
       </section>
