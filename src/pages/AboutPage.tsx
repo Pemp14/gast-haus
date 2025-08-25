@@ -112,7 +112,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Additional Features Section */}
-      <section className="py-6 lg:py-8 bg-gradient-to-b from-cream to-warm-white">
+      <section className="py-6 lg:py-8 bg-gradient-to-b from-warm-white to-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-charcoal mb-4 font-serif">
