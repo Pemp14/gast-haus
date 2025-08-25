@@ -154,15 +154,27 @@ input[type="checkbox"] {
   background-image: var(--sprite-image);
   transform-origin: center center;
   background-size: calc(1px * var(--sprite-uw)) calc(1px * var(--sprite-uh));
+  
+  /* Добавляем мигающую анимацию */
+  animation: burger-blink 2s ease-in-out infinite, to-start var(--sprite-as) var(--sprite-at) 0s var(--sprite-ai) var(--sprite-ad) var(--sprite-af) var(--sprite-ap);
 
   /* Y position, round to check next ROW */
   --row: calc(round(down, calc(calc(var(--sprite-tw) * var(--sprite-fs)) / var(--sprite-uw)), 1) * var(--sprite-th));
   /* X position, mod to check COLUMN */
   --col: mod(calc(var(--sprite-tw) * var(--sprite-fs)), var(--sprite-uw));
   background-position: calc(-1px * var(--col)) calc(-1px * var(--row));
+}
 
-  /* animation duration based on frame rate */
-  animation: to-start var(--sprite-as) var(--sprite-at) 0s var(--sprite-ai) var(--sprite-ad) var(--sprite-af) var(--sprite-ap);
+/* Анимация мигания для бургера */
+@keyframes burger-blink {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.6; 
+    transform: scale(1.05);
+  }
 }
 
 .sprite:has(+ input:checked) {
@@ -179,12 +191,12 @@ input[type="checkbox"] {
   --sprite-as: calc(var(--sprite-f) / var(--sprite-fr) * 1s);
 
   top: 0;
+  /* Убираем мигание после клика */
+  animation: frame var(--sprite-as) var(--sprite-at) 0s var(--sprite-ai) var(--sprite-ad) var(--sprite-af) var(--sprite-ap);
   /* Y position, round to check next ROW */
   --row: calc(round(down, calc(calc(var(--sprite-tw) * var(--sprite-fs)) / var(--sprite-uw)), 1) * var(--sprite-th));
   /* X position, mod to check COLUMN */
   --col: mod(calc(var(--sprite-tw) * var(--sprite-fs)), var(--sprite-uw));
-
-  animation: frame var(--sprite-as) var(--sprite-at) 0s var(--sprite-ai) var(--sprite-ad) var(--sprite-af) var(--sprite-ap);
 }
 
 .sprite:has(+ input:checked):before {
