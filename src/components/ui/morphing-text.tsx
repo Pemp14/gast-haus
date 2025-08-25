@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 const morphTime = 1.8;
-const cooldownTime = 0.8;
+const cooldownTime = 0.25;
 
 const useMorphingText = (texts: string[]) => {
   const textIndexRef = useRef(0);
@@ -14,17 +14,18 @@ const useMorphingText = (texts: string[]) => {
   const cooldownRef = useRef(0);
   const timeRef = useRef(new Date());
   const [isComplete, setIsComplete] = useState(false);
-  const [currentWordStartTime, setCurrentWordStartTime] = useState(0);
+  const [wordStartTime, setWordStartTime] = useState(Date.now());
 
   const text1Ref = useRef<HTMLSpanElement>(null);
   const text2Ref = useRef<HTMLSpanElement>(null);
 
-  // Настройки времени для каждого слова (в секундах)
+  // Время показа каждого слова (в миллисекундах)
   const wordTimings = [
-    3.0, // "Welcome" - показывается 3 секунды
-    1.5, // "to" - показывается 1.5 секунды  
-    Infinity,   // "Gast Haus" - остается навсегда
+    1500, // "Welcome" - 1.5 секунды
+    1000, // "to" - 1 секунда  
+    2000, // "Gast Haus" - 2 секунды, потом завершение
   ];
+
   const setStyles = useCallback(
     (fraction: number) => {
       const [current1, current2] = [text1Ref.current, text2Ref.current];
@@ -57,17 +58,27 @@ const useMorphingText = (texts: string[]) => {
     setStyles(fraction);
 
     if (fraction === 1) {
-      // Если достигли последнего текста, останавливаем
-      if (textIndexRef.current >= texts.length - 1) {
+      textIndexRef.current++;
+      setWordStartTime(Date.now());
+      
+      // Если показали все слова, завершаем
+      if (textIndexRef.current >= texts.length) {
         setIsComplete(true);
         return;
       }
-      textIndexRef.current++;
     }
   }, [setStyles, texts.length]);
 
   const doCooldown = useCallback(() => {
-    morphRef.current = 0;
+    // Проверяем, прошло ли достаточно времени для текущего слова
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - wordStartTime;
+    const currentWordTiming = wordTimings[textIndexRef.current] || 1000;
+    
+    if (elapsedTime >= currentWordTiming) {
+      morphRef.current = 0;
+    }
+    
     const [current1, current2] = [text1Ref.current, text2Ref.current];
     if (current1 && current2) {
       current2.style.filter = "none";
@@ -75,6 +86,10 @@ const useMorphingText = (texts: string[]) => {
       current1.style.filter = "none";
       current1.style.opacity = "0%";
     }
+  }, [wordStartTime, wordTimings]);
+
+  useEffect(() => {
+    setWordStartTime(Date.now());
   }, []);
 
   useEffect(() => {

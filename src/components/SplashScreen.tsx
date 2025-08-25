@@ -14,18 +14,18 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
   const handleBurgerClick = () => {
     if (!isClicked) {
       setIsClicked(true);
-      // Показываем текст через 1.5 секунды после клика
+      // Показываем текст через 2 секунды после клика
       setTimeout(() => {
         setShowText(true);
-      }, 1500);
-      // Через 9 секунд начинаем анимацию выхода (1.5 + 7.5)
+      }, 2000);
+      // Через 8.5 секунд начинаем анимацию выхода (2 + 1.5 + 1 + 2 + 2)
       setTimeout(() => {
         setIsExiting(true);
         // Через 1 секунду полностью закрываем
         setTimeout(() => {
           onComplete();
         }, 1000);
-      }, 9000);
+      }, 8500);
     }
   };
 
