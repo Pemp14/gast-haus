@@ -65,6 +65,12 @@ const translations = {
     
     // Footer
     copyright: '© 2025 Gast Haus',
+    
+    // Circular Menu
+    fast: 'Fast',
+    aromatic: 'Aromatic', 
+    tasty: 'Tasty',
+    tender: 'Tender',
   },
   ru: {
     // Navigation
@@ -119,6 +125,12 @@ const translations = {
     
     // Footer
     copyright: '© 2025 Gast Haus',
+    
+    // Circular Menu
+    fast: 'Быстро',
+    aromatic: 'Ароматно',
+    tasty: 'Вкусно', 
+    tender: 'Нежно',
   },
   en: {
     // Navigation
@@ -173,6 +185,12 @@ const translations = {
     
     // Footer
     copyright: '© 2025 Gast Haus',
+    
+    // Circular Menu
+    fast: 'Fast',
+    aromatic: 'Aromatic',
+    tasty: 'Tasty',
+    tender: 'Tender',
   },
 };
 
