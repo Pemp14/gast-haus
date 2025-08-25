@@ -18,14 +18,14 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
       setTimeout(() => {
         setShowText(true);
       }, 2000);
-      // Через 6.5 секунд начинаем анимацию выхода (2 + 1.5 + 1 + 2)
+      // Через 8.5 секунд начинаем анимацию выхода (2 + 1.5 + 1 + 2 + 1)
       setTimeout(() => {
         setIsExiting(true);
         // Через 1 секунду полностью закрываем
         setTimeout(() => {
           onComplete();
         }, 1000);
-      }, 6500);
+      }, 8500);
     }
   };
 
@@ -46,14 +46,10 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
       </div>
       {showText && (
         <div className="morphing-text-container">
-          <div className="relative text-center">
-            <h2 
-              className="text-white font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wider"
-              style={{ fontFamily: 'Fredoka One, cursive' }}
-            >
-              Welcome
-            </h2>
-          </div>
+          <MorphingText 
+            texts={['Welcome', 'to', 'Gast Haus']}
+            className="text-white"
+          />
         </div>
       )}
     </div>
