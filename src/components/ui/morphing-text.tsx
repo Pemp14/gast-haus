@@ -23,7 +23,7 @@ const useMorphingText = (texts: string[]) => {
   const wordTimings = [
     3.0, // "Welcome" - показывается 3 секунды
     1.5, // "to" - показывается 1.5 секунды  
-    0,   // "Gast Haus" - остается навсегда
+    Infinity,   // "Gast Haus" - остается навсегда
   ];
   const setStyles = useCallback(
     (fraction: number) => {
@@ -47,6 +47,15 @@ const useMorphingText = (texts: string[]) => {
     // Если достигли последнего текста, останавливаем морфинг
     if (textIndexRef.current >= texts.length - 1) {
       setIsComplete(true);
+      // Устанавливаем финальный текст
+      const [current1, current2] = [text1Ref.current, text2Ref.current];
+      if (current1 && current2) {
+        current1.style.filter = "none";
+        current1.style.opacity = "0%";
+        current2.style.filter = "none";
+        current2.style.opacity = "100%";
+        current2.textContent = texts[texts.length - 1];
+      }
       return;
     }
 
@@ -59,7 +68,7 @@ const useMorphingText = (texts: string[]) => {
       setCurrentWordStartTime(currentTime);
     }
     
-    if (currentTime - currentWordStartTime < wordDuration) {
+    if (currentTime - currentWordStartTime < wordDuration && wordDuration !== Infinity) {
       return; // Еще не время переходить к следующему слову
     }
     morphRef.current -= cooldownRef.current;
