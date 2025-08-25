@@ -46,10 +46,14 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
       </div>
       {showText && (
         <div className="morphing-text-container">
-          <MorphingText 
-            texts={["Welcome", "to", "Gast Haus"]} 
-            className="text-white font-serif"
-          />
+          <div className="relative text-center">
+            <h2 
+              className="text-white font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wider"
+              style={{ fontFamily: 'Fredoka One, cursive' }}
+            >
+              Welcome
+            </h2>
+          </div>
         </div>
       )}
     </div>
