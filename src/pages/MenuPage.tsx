@@ -87,13 +87,6 @@ const MenuPage: React.FC = () => {
         <div className="absolute bottom-10 right-10 w-16 h-16 border border-green-400/15 rounded-full hidden lg:block"></div>
         
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
-          <div className="mb-6">
-            <div className="w-12 h-0.5 bg-green-400 mx-auto mb-4"></div>
-            <p className="text-green-400 font-medium text-sm tracking-[0.3em] uppercase">
-              {t('culinaryExcellence')}
-            </p>
-          </div>
-          
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal mb-6 sm:mb-8 font-serif leading-tight">
             {t('menu')}
           </h1>
