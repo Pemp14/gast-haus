@@ -235,10 +235,8 @@ body {
   position: relative;
 }
 .animated-button .char span:nth-child(5) {
-  margin-left: 5px;
 }
 .animated-button .char.state-1 span:nth-child(5) {
-  margin-right: -3px;
 }
 .animated-button .char.state-1 span {
   animation: charAppear 1.2s ease backwards calc(var(--i) * 0.03s);
