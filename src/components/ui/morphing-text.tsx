@@ -44,33 +44,6 @@ const useMorphingText = (texts: string[]) => {
   );
 
   const doMorph = useCallback(() => {
-    // Если достигли последнего текста, останавливаем морфинг
-    if (textIndexRef.current >= texts.length - 1) {
-      setIsComplete(true);
-      // Устанавливаем финальный текст
-      const [current1, current2] = [text1Ref.current, text2Ref.current];
-      if (current1 && current2) {
-        current1.style.filter = "none";
-        current1.style.opacity = "0%";
-        current2.style.filter = "none";
-        current2.style.opacity = "100%";
-        current2.textContent = texts[texts.length - 1];
-      }
-      return;
-    }
-
-    // Проверяем, нужно ли переходить к следующему слову
-    const currentTime = new Date().getTime();
-    const currentWordIndex = textIndexRef.current;
-    const wordDuration = wordTimings[currentWordIndex] * 1000; // в миллисекундах
-    
-    if (currentWordStartTime === 0) {
-      setCurrentWordStartTime(currentTime);
-    }
-    
-    if (currentTime - currentWordStartTime < wordDuration && wordDuration !== Infinity) {
-      return; // Еще не время переходить к следующему слову
-    }
     morphRef.current -= cooldownRef.current;
     cooldownRef.current = 0;
 
@@ -84,10 +57,14 @@ const useMorphingText = (texts: string[]) => {
     setStyles(fraction);
 
     if (fraction === 1) {
+      // Если достигли последнего текста, останавливаем
+      if (textIndexRef.current >= texts.length - 1) {
+        setIsComplete(true);
+        return;
+      }
       textIndexRef.current++;
-      setCurrentWordStartTime(0); // Сбрасываем время для следующего слова
     }
-  }, [setStyles, texts.length, wordTimings, currentWordStartTime]);
+  }, [setStyles, texts.length]);
 
   const doCooldown = useCallback(() => {
     morphRef.current = 0;
