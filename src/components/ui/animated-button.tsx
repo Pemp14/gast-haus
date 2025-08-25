@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 interface AnimatedButtonProps {
   href?: string;
@@ -8,6 +9,8 @@ interface AnimatedButtonProps {
 }
 
 const AnimatedButton: React.FC<AnimatedButtonProps> = ({ href, onClick, children, className = "" }) => {
+  const { t } = useLanguage();
+
   const buttonContent = (
     <button className={`animated-button ${className}`} onClick={onClick}>
       <div className="bg"></div>
@@ -106,14 +109,9 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({ href, onClick, children
         <div className="outline"></div>
         <div className="content">
           <span className="char state-1">
-            <span data-label="O" style={{"--i": 1} as React.CSSProperties}>O</span>
-            <span data-label="r" style={{"--i": 2} as React.CSSProperties}>r</span>
-            <span data-label="d" style={{"--i": 3} as React.CSSProperties}>d</span>
-            <span data-label="e" style={{"--i": 4} as React.CSSProperties}>e</span>
-            <span data-label="r" style={{"--i": 5} as React.CSSProperties}>r</span>
-            <span data-label="N" style={{"--i": 6} as React.CSSProperties}>N</span>
-            <span data-label="o" style={{"--i": 7} as React.CSSProperties}>o</span>
-            <span data-label="w" style={{"--i": 8} as React.CSSProperties}>w</span>
+            {t('orderNow').split('').map((char, index) => (
+              <span key={index} data-label={char} style={{"--i": index + 1} as React.CSSProperties}>{char}</span>
+            ))}
           </span>
 
           <div className="icon">
@@ -121,11 +119,9 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({ href, onClick, children
           </div>
 
           <span className="char state-2">
-            <span data-label="G" style={{"--i": 1} as React.CSSProperties}>G</span>
-            <span data-label="l" style={{"--i": 2} as React.CSSProperties}>l</span>
-            <span data-label="o" style={{"--i": 3} as React.CSSProperties}>o</span>
-            <span data-label="v" style={{"--i": 4} as React.CSSProperties}>v</span>
-            <span data-label="o" style={{"--i": 5} as React.CSSProperties}>o</span>
+            {'Glovo'.split('').map((char, index) => (
+              <span key={index} data-label={char} style={{"--i": index + 1} as React.CSSProperties}>{char}</span>
+            ))}
           </span>
         </div>
       </div>

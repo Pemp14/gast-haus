@@ -61,6 +61,7 @@ const translations = {
     glovoDelivery: 'Livrare Glovo',
     glovoDescription: 'Puteți comanda mâncarea din restaurantul nostru și prin Glovo',
     orderOnGlovo: 'Comandă pe Glovo',
+    orderNow: 'Comandă',
     
     // Footer
     copyright: '© 2025 Gast Haus',
@@ -114,6 +115,7 @@ const translations = {
     glovoDelivery: 'Доставка Glovo',
     glovoDescription: 'Вы также можете заказать еду из нашего ресторана в Glovo',
     orderOnGlovo: 'Заказать в Glovo',
+    orderNow: 'Заказать',
     
     // Footer
     copyright: '© 2025 Gast Haus',
@@ -167,6 +169,7 @@ const translations = {
     glovoDelivery: 'Glovo Delivery',
     glovoDescription: 'You can also order food from our restaurant through Glovo',
     orderOnGlovo: 'Order on Glovo',
+    orderNow: 'Order',
     
     // Footer
     copyright: '© 2025 Gast Haus',
