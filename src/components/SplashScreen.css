@@ -154,6 +154,7 @@ input[type="checkbox"] {
   background-image: var(--sprite-image);
   transform-origin: center center;
   background-size: calc(1px * var(--sprite-uw)) calc(1px * var(--sprite-uh));
+  z-index: 10;
   
   /* Добавляем мигающую анимацию */
   animation: burger-blink 2s ease-in-out infinite, to-start var(--sprite-as) var(--sprite-at) 0s var(--sprite-ai) var(--sprite-ad) var(--sprite-af) var(--sprite-ap);
