@@ -1,17 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import { useCallback, useEffect, useRef } from "react";
 
 import { cn } from "@/lib/utils";
 
-const morphTime = 1.5;
-const cooldownTime = 0.5;
+const morphTime = 2.0;
+const cooldownTime = 1.5;
 
 const useMorphingText = (texts: string[]) => {
   const textIndexRef = useRef(0);
   const morphRef = useRef(0);
   const cooldownRef = useRef(0);
   const timeRef = useRef(new Date());
+  const [isComplete, setIsComplete] = useState(false);
 
   const text1Ref = useRef<HTMLSpanElement>(null);
   const text2Ref = useRef<HTMLSpanElement>(null);
@@ -35,6 +37,12 @@ const useMorphingText = (texts: string[]) => {
   );
 
   const doMorph = useCallback(() => {
+    // Если достигли последнего текста, останавливаем морфинг
+    if (textIndexRef.current >= texts.length - 1) {
+      setIsComplete(true);
+      return;
+    }
+
     morphRef.current -= cooldownRef.current;
     cooldownRef.current = 0;
 
@@ -64,6 +72,9 @@ const useMorphingText = (texts: string[]) => {
   }, []);
 
   useEffect(() => {
+    // Если морфинг завершен, не запускаем анимацию
+    if (isComplete) return;
+
     let animationFrameId: number;
 
     const animate = () => {
@@ -83,7 +94,7 @@ const useMorphingText = (texts: string[]) => {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [doMorph, doCooldown]);
+  }, [doMorph, doCooldown, isComplete]);
 
   return { text1Ref, text2Ref };
 };

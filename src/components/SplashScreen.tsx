@@ -31,7 +31,7 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
       {isClicked && (
         <div className="morphing-text-container">
           <MorphingText 
-            texts={["Welcome", "to", "Gast", "Haus"]} 
+            texts={["Welcome", "to", "Gast Haus"]} 
             className="text-white"
           />
         </div>
