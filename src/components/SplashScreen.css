@@ -50,11 +50,6 @@
   transform: scale(0.95);
 }
 
-.splash-screen.clicked .sprite {
-  transform: translateY(180px);
-  transition: transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
 .morphing-text-container {
   position: absolute;
   top: 50%;
@@ -62,8 +57,7 @@
   transform: translateX(-50%) translateY(-50%);
   width: 90%;
   max-width: 600px;
-  opacity: 0;
-  animation: fadeInMorphing 1.5s ease-out 1s forwards;
+  animation: fadeInMorphing 1.5s ease-out forwards;
 }
 
 @keyframes fadeInMorphing {
