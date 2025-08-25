@@ -37,7 +37,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" aria-label="Home">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif tracking-wider text-white text-shadow hover:text-green-400 transition-colors duration-300">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wider text-white text-shadow hover:text-green-400 transition-colors duration-300" style={{ fontFamily: 'Fredoka One, cursive' }}>
                 Gast Haus
               </h1>
             </Link>
