@@ -1,121 +1,105 @@
 "use client";
 
-import { useState } from "react";
-import { useCallback, useEffect, useRef } from "react";
-
+import { useState, useEffect, useRef, useCallback } from "react";
 import { cn } from "@/lib/utils";
 
-const morphTime = 1.8;
-const cooldownTime = 0.25;
+const morphTime = 1;
+const cooldownTime = 0.1;
 
 const useMorphingText = (texts: string[]) => {
-  const textIndexRef = useRef(0);
-  const morphRef = useRef(0);
-  const cooldownRef = useRef(0);
-  const timeRef = useRef(new Date());
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [morphProgress, setMorphProgress] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
   const [wordStartTime, setWordStartTime] = useState(Date.now());
-
+  
   const text1Ref = useRef<HTMLSpanElement>(null);
   const text2Ref = useRef<HTMLSpanElement>(null);
+  const animationRef = useRef<number>();
 
   // Время показа каждого слова (в миллисекундах)
   const wordTimings = [
     1500, // "Welcome" - 1.5 секунды
     1000, // "to" - 1 секунда  
-    2000, // "Gast Haus" - 2 секунды, потом завершение
+    2000, // "Gast Haus" - 2 секунды
   ];
 
-  const setStyles = useCallback(
-    (fraction: number) => {
-      const [current1, current2] = [text1Ref.current, text2Ref.current];
-      if (!current1 || !current2) return;
-
-      current2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-      current2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-
-      const invertedFraction = 1 - fraction;
-      current1.style.filter = `blur(${Math.min(8 / invertedFraction - 8, 100)}px)`;
-      current1.style.opacity = `${Math.pow(invertedFraction, 0.4) * 100}%`;
-
-      current1.textContent = texts[textIndexRef.current % texts.length];
-      current2.textContent = texts[(textIndexRef.current + 1) % texts.length];
-    },
-    [texts],
-  );
-
-  const doMorph = useCallback(() => {
-    morphRef.current -= cooldownRef.current;
-    cooldownRef.current = 0;
-
-    let fraction = morphRef.current / morphTime;
-
-    if (fraction > 1) {
-      cooldownRef.current = cooldownTime;
-      fraction = 1;
-    }
-
-    setStyles(fraction);
-
-    if (fraction === 1) {
-      textIndexRef.current++;
-      setWordStartTime(Date.now());
-      
-      // Если показали все слова, завершаем
-      if (textIndexRef.current >= texts.length) {
-        setIsComplete(true);
-        return;
-      }
-    }
-  }, [setStyles, texts.length]);
-
-  const doCooldown = useCallback(() => {
-    // Проверяем, прошло ли достаточно времени для текущего слова
-    const currentTime = Date.now();
-    const elapsedTime = currentTime - wordStartTime;
-    const currentWordTiming = wordTimings[textIndexRef.current] || 1000;
-    
-    if (elapsedTime >= currentWordTiming) {
-      morphRef.current = 0;
-    }
-    
+  const setStyles = useCallback((fraction: number) => {
     const [current1, current2] = [text1Ref.current, text2Ref.current];
-    if (current1 && current2) {
-      current2.style.filter = "none";
-      current2.style.opacity = "100%";
-      current1.style.filter = "none";
-      current1.style.opacity = "0%";
+    if (!current1 || !current2) return;
+
+    // Текущий и следующий текст
+    const currentText = texts[currentTextIndex] || '';
+    const nextText = texts[currentTextIndex + 1] || texts[currentTextIndex];
+
+    if (fraction === 0) {
+      // Показываем только текущий текст
+      current1.textContent = currentText;
+      current2.textContent = nextText;
+      current1.style.opacity = '1';
+      current1.style.filter = 'blur(0px)';
+      current2.style.opacity = '0';
+      current2.style.filter = 'blur(8px)';
+    } else {
+      // Морфинг между текстами
+      current1.textContent = currentText;
+      current2.textContent = nextText;
+      
+      current1.style.opacity = `${Math.pow(1 - fraction, 0.4)}`;
+      current1.style.filter = `blur(${Math.min(8 / (1 - fraction) - 8, 100)}px)`;
+      
+      current2.style.opacity = `${Math.pow(fraction, 0.4)}`;
+      current2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
     }
-  }, [wordStartTime, wordTimings]);
+  }, [texts, currentTextIndex]);
 
   useEffect(() => {
-    setWordStartTime(Date.now());
-  }, []);
-
-  useEffect(() => {
-    // Если морфинг завершен, не запускаем анимацию
     if (isComplete) return;
 
-    let animationFrameId: number;
-
     const animate = () => {
-      animationFrameId = requestAnimationFrame(animate);
+      const now = Date.now();
+      const elapsed = now - wordStartTime;
+      const currentWordTiming = wordTimings[currentTextIndex] || 1000;
 
-      const newTime = new Date();
-      const dt = (newTime.getTime() - timeRef.current.getTime()) / 1000;
-      timeRef.current = newTime;
+      if (elapsed >= currentWordTiming) {
+        // Время показа текущего слова истекло
+        if (currentTextIndex < texts.length - 1) {
+          // Переходим к следующему слову
+          setCurrentTextIndex(prev => prev + 1);
+          setWordStartTime(now);
+          setMorphProgress(0);
+        } else {
+          // Все слова показаны
+          setIsComplete(true);
+          return;
+        }
+      } else if (elapsed >= currentWordTiming - morphTime * 1000) {
+        // Начинаем морфинг за 1 секунду до конца
+        const morphElapsed = elapsed - (currentWordTiming - morphTime * 1000);
+        const progress = Math.min(morphElapsed / (morphTime * 1000), 1);
+        setMorphProgress(progress);
+      } else {
+        // Просто показываем текущий текст
+        setMorphProgress(0);
+      }
 
-      cooldownRef.current -= dt;
-
-      if (cooldownRef.current <= 0) doMorph();
-      else doCooldown();
+      setStyles(morphProgress);
+      animationRef.current = requestAnimationFrame(animate);
     };
 
-    animate();
+    setWordStartTime(Date.now());
+    animationRef.current = requestAnimationFrame(animate);
+
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
     };
-  }, [doMorph, doCooldown, isComplete]);
+  }, [currentTextIndex, morphProgress, isComplete, setStyles, texts.length, wordTimings]);
+
+  // Инициализация
+  useEffect(() => {
+    setStyles(0);
+  }, [setStyles]);
 
   return { text1Ref, text2Ref };
 };

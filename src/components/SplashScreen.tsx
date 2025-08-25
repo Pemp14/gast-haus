@@ -18,14 +18,14 @@ const SplashScreen: React.FC<SplashScreenProps> = ({ onComplete }) => {
       setTimeout(() => {
         setShowText(true);
       }, 2000);
-      // Через 8.5 секунд начинаем анимацию выхода (2 + 1.5 + 1 + 2 + 2)
+      // Через 6.5 секунд начинаем анимацию выхода (2 + 1.5 + 1 + 2)
       setTimeout(() => {
         setIsExiting(true);
         // Через 1 секунду полностью закрываем
         setTimeout(() => {
           onComplete();
         }, 1000);
-      }, 8500);
+      }, 6500);
     }
   };
 
